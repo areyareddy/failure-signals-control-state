@@ -304,5 +304,24 @@
         ]
       }
     }
+  },
+  "s4_bootstrap_prespecified": {
+    "n_boot": 20000,
+    "seed": 20260828,
+    "method": "root-cluster bootstrap over all 40 theorems, blocks as repeated measures",
+    "joules": {
+      "point": 0.125793595255137,
+      "ci95": [
+        0.07016632754764607,
+        0.17959161113976896
+      ]
+    },
+    "tokens": {
+      "point": 0.107767769055371,
+      "ci95": [
+        0.060416932767742515,
+        0.15365226325129377
+      ]
+    }
   }
 }

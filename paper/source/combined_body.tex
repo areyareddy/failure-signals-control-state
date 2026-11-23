@@ -431,7 +431,7 @@ The primary endpoint is the paired difference in verified roots, over all 40 roo
 Board power is integrated per attempt with the trapezoid rule; an attempt without full telemetry coverage would fail its energy claim rather than be interpolated, and none did.  Long used \CapLongKJ{}\,kJ and Targeted-8K \CapTargetedKJ{}\,kJ over all blocks.  This is GPU board energy only; host, memory and cooling are not measured.  Idle draw (\CapIdleWatts{}\,W) is included in both totals.
 
 \begin{table}[h]
-\caption{S4 per block.  Verified counts are Targeted-8K/Long.  Savings are relative to Long; the energy interval is a post hoc bootstrap over the 40 roots (10{,}000 replicates), resampling affected and unaffected roots separately; it replaces the specification's root-cluster bootstrap (20{,}000 replicates, seed 20260828).}
+\caption{S4 per block.  Verified counts are Targeted-8K/Long.  Savings are relative to Long; the energy interval is a post hoc bootstrap over the 40 roots (10{,}000 replicates), resampling affected and unaffected roots separately; it replaces the specification's root-cluster bootstrap over all 40 roots (20{,}000 replicates, seed 20260828), which gives \CrCapEnergyPrespecCI{} for the pooled energy saving and \CrCapTokensPrespecCI{} for tokens.}
 \label{tab:cap-perblock}
 \centering\small
 \begin{tabular}{lccrrrr}

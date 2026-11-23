@@ -295,6 +295,34 @@ def energy_bootstrap(by, affected):
     return out
 
 
+def prespecified_bootstrap(by, affected, n_boot=20_000, seed=20260828):
+    """The aggregate interval CAP_POLICY_SPEC.md pre-specifies: a bootstrap over the 40
+    theorems with blocks as repeated measures (a theorem's three blocks move together),
+    20,000 replicates, seed 20260828. Unlike energy_bootstrap, affected and unaffected
+    roots are not resampled separately. Uses its own RNG, so other outputs are unchanged."""
+    blocks = sorted({b for b, _ in by})
+    roots = sorted(by[(blocks[0], "long")])
+
+    def saving(sample, key):
+        long_tot = targ_tot = 0.0
+        for b in blocks:
+            L, S = by[(b, "long")], by[(b, "short")]
+            for r in sample:
+                long_tot += L[r][key]
+                targ_tot += (S if r in affected else L)[r][key]
+        return 1 - targ_tot / long_tot
+
+    rng = random.Random(seed)
+    samples = [[rng.choice(roots) for _ in roots] for _ in range(n_boot)]
+    out = {"n_boot": n_boot, "seed": seed,
+           "method": "root-cluster bootstrap over all 40 theorems, blocks as repeated measures"}
+    for key in ("joules", "tokens"):
+        v = sorted(saving(s, key) for s in samples)
+        out[key] = {"point": saving(roots, key),
+                    "ci95": [v[int(0.025 * n_boot)], v[int(0.975 * n_boot) - 1]]}
+    return out
+
+
 def main():
     out = {"status": "added control analyses; post hoc and descriptive"}
     out["s2_breakdown"] = s2_breakdown()
@@ -311,6 +339,7 @@ def main():
     }
     out["s4_truncation_prediction"] = truncation_prediction(by, affected)
     out["s4_bootstrap"] = energy_bootstrap(by, affected)
+    out["s4_bootstrap_prespecified"] = prespecified_bootstrap(by, affected)
     OUT.write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(json.dumps(out, indent=1))
 

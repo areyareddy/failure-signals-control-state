@@ -207,6 +207,11 @@ for key, w in (("joules", "Energy"), ("tokens", "Tokens")):
         c = bs[key]["ci95"][b]
         m(f"CrCap{w}B{bw}CI", f"[{pct(c[0])}, {pct(c[1])}]")
 
+ps = S24["s4_bootstrap_prespecified"]
+for key, w in (("joules", "Energy"), ("tokens", "Tokens")):
+    lo, hi = ps[key]["ci95"]
+    m(f"CrCap{w}PrespecCI", f"[{pct(lo)}, {pct(hi)}]")
+
 # S4 run record: canary, stop limit, freeze timing.  Read from the run's own logs.
 import csv
 import re
