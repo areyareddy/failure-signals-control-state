@@ -23,6 +23,16 @@ python scripts/s62_cr_s2s4_controls.py  # about 10 minutes; writes audit/cr_s2s4
 Both outputs should be byte-identical to the committed files. `s61` stops with an assertion
 error if its replays do not reproduce the predecessor's published ablation values.
 
+## 2b. S2 accounting and prefill crossover
+
+```bash
+python scripts/s28_w2_accounting.py      # writes audit/w2_accounting.json and audit/w2_accounting_rows.csv
+python scripts/s42_prefill_crossover.py  # writes audit/prefill_crossover.json
+```
+
+Both outputs should be byte-identical to the committed files. They give the S2 phase
+accounting (Tables 13 and 14) and the prefill crossover in Section 4.
+
 ## 3. S1 audits
 
 ```bash

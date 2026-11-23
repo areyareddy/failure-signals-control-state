@@ -1,0 +1,127 @@
+{
+  "arms": [
+    "A",
+    "C"
+  ],
+  "cohort": "primary_eval",
+  "crossover_rho_frozen_armC": {
+    "0.05": 4.156365927172985,
+    "0.10": 8.774550290698523,
+    "0.25": 26.323650872095566,
+    "0.50": 78.9709526162867
+  },
+  "frozen_regime": {
+    "A": {
+      "R_stack": 25.10882890186092,
+      "decode_ms": 1973290.683,
+      "decode_tok_per_s": 134.56050965401533,
+      "decode_tokens": 265527,
+      "n": 40,
+      "prefill_ms": 2293.2190000000005,
+      "prefill_serving_share": 0.0011607803635565364,
+      "prefill_serving_share_pct": 0.11607803635565364,
+      "prefill_tok_per_s": 3378.6568138498756,
+      "prefill_tokens": 7748,
+      "rho_workload": 0.02917970677181605
+    },
+    "C": {
+      "R_stack": 78.9709526162867,
+      "decode_ms": 1711070.6860000005,
+      "decode_tok_per_s": 110.86216458038248,
+      "decode_tokens": 189693,
+      "n": 40,
+      "prefill_ms": 35684.740000000005,
+      "prefill_serving_share": 0.020429156520049646,
+      "prefill_serving_share_pct": 2.0429156520049645,
+      "prefill_tok_per_s": 8754.890746016363,
+      "prefill_tokens": 312416,
+      "rho_workload": 1.646955870801769
+    },
+    "pooled": {
+      "R_stack": 68.2310039447025,
+      "decode_ms": 3684361.369,
+      "decode_tok_per_s": 123.55465558568558,
+      "decode_tokens": 455220,
+      "n": 80,
+      "prefill_ms": 37977.958999999995,
+      "prefill_serving_share": 0.01020271277105879,
+      "prefill_serving_share_pct": 1.020271277105879,
+      "prefill_tok_per_s": 8430.258192653271,
+      "prefill_tokens": 320164,
+      "rho_workload": 0.7033170774570537
+    }
+  },
+  "identity": "S = rho/(rho+R); rho = prefill/decode tokens, R = r_prefill/r_decode",
+  "identity_is_exact": true,
+  "interpretation": {
+    "not_a_model": "The decomposition is an algebraic identity, not a fitted or predictive model. Its use is to separate the workload term from the stack term so the measured share can be restated for a different deployment.",
+    "regime_scope": "R is a property of the serving stack and changes with slot count, batching, caching and hardware. Each regime is measured, not assumed."
+  },
+  "measured_regimes": {
+    "p4": {
+      "arms": {
+        "A": {
+          "R_stack": 49.338646955831905,
+          "counterfactual_share_at_frozen_rho_pct": 0.05910672748719515,
+          "decode_ms": 3714206.318,
+          "decode_tok_per_s": 74.44928372985444,
+          "decode_tokens": 276520,
+          "n": 40,
+          "prefill_ms": 2109.317,
+          "prefill_serving_share": 0.0005675828447224989,
+          "prefill_serving_share_pct": 0.05675828447224989,
+          "prefill_tok_per_s": 3673.2269260618486,
+          "prefill_tokens": 7748,
+          "rho_workload": 0.028019673079704904
+        },
+        "C": {
+          "R_stack": 178.49610135184736,
+          "counterfactual_share_at_frozen_rho_pct": 0.9142488731975953,
+          "decode_ms": 3741856.464,
+          "decode_tok_per_s": 48.80732378621779,
+          "decode_tokens": 182630,
+          "n": 40,
+          "prefill_ms": 35860.764,
+          "prefill_serving_share": 0.009492707324466797,
+          "prefill_serving_share_pct": 0.9492707324466797,
+          "prefill_tok_per_s": 8711.917013257162,
+          "prefill_tokens": 312416,
+          "rho_workload": 1.7106499479822592
+        },
+        "pooled": {
+          "R_stack": 136.92600625720294,
+          "decode_ms": 7456062.781999999,
+          "decode_tok_per_s": 61.580758293566646,
+          "decode_tokens": 459150,
+          "n": 80,
+          "prefill_ms": 37970.081000000006,
+          "prefill_serving_share": 0.005066708632606647,
+          "prefill_serving_share_pct": 0.5066708632606647,
+          "prefill_tok_per_s": 8432.007295428208,
+          "prefill_tokens": 320164,
+          "rho_workload": 0.6972971795709463
+        }
+      },
+      "complete": true,
+      "determinism_vs_frozen": {
+        "all_identical": false,
+        "n_compared": 80,
+        "n_identical": 9
+      },
+      "run": {
+        "finished_at": 1788038700.0363812,
+        "n_branches": 80,
+        "n_ctx": 25600,
+        "parallel_slots": 4,
+        "started_at": 1788036738.1969533,
+        "workers": 4
+      }
+    }
+  },
+  "target_shares": [
+    0.05,
+    0.1,
+    0.25,
+    0.5
+  ]
+}

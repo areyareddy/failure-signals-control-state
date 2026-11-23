@@ -400,7 +400,7 @@ def write_tables(result: dict) -> None:
         for cohort in COHORTS:
             p = next((p for p in result["phase_split"]
                       if p["cohort"] == cohort and p["arm"] == a), None)
-            cells.append("---" if p is None else f"{p['prefill_share_pct']:.2f}")
+            cells.append("---" if p is None else f"{p['prefill_share_pct']:.3f}")
         ratios = [p for p in result["phase_split"] if p["arm"] == a]
         pf = statistics.fmean(p["prefill_tok_per_s"] for p in ratios)
         dc = statistics.fmean(p["decode_tok_per_s"] for p in ratios)
