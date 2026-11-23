@@ -53,15 +53,23 @@ Two scripts add control analyses to the paper. Both read only existing records.
 
 ## Frozen digests
 
-`audit/cap_policy_hashes.json` records the SHA-256 of every file frozen before the S4 run.
-Of the seven shipped files, five match their frozen digest exactly. Two differ through the
-one recorded amendment: the frozen driver `scripts/s57_run_cap_policy.py` never passed
-`--block` to the generation step, so blocks 2 and 3 would have silently generated nothing.
-It was patched to pass the block from the frozen plan and to fail when a cohort makes no
-progress, and `spec/CAP_POLICY_SPEC.md` gained a dated change-log row describing it. The
-amendment, its impact (no branch was generated under wrong settings) and the post-amendment
-digests are in the `amendments` array of that file. The analysis script `s56` was not
-modified. `python scripts/verify_artifact.py` checks both cases.
+`audit/cap_policy_hashes.json` records the SHA-256 of the nine files fixed before the S4 run
+(its `freeze_timing` field says which were written before generation; the digests themselves
+were recorded 39 minutes into block 1, together with the analysis script, before any outcome
+was queried). All nine are shipped. Seven match their frozen digest exactly. Two differ
+through the one recorded amendment: the frozen driver `scripts/s57_run_cap_policy.py` never
+passed `--block` to the generation step, so blocks 2 and 3 would have silently generated
+nothing. It was patched to pass the block from the frozen plan and to fail when a cohort
+makes no progress, and `spec/CAP_POLICY_SPEC.md` gained a dated change-log row describing it.
+The amendment, its impact (no branch was generated under wrong settings) and the
+post-amendment digests are in the `amendments` array of that file, and the pre-amendment
+copies are in `audit/*.as_frozen_20260830`. The analysis script `s56` was not modified.
+`python scripts/verify_artifact.py` checks all of this.
+
+A second departure is recorded only in `audit/telemetry/cap_policy.markers.csv`: the
+specification's stop rule was a 3 GPU-hour limit, the 10-attempt canary projected 3.03
+GPU-hours, and the limit was raised to 3.5 before the main run (marker `generation_start`).
+The decision used cost information only; the run used 2.9 GPU-hours.
 
 ## Release adjustments
 

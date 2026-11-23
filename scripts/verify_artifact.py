@@ -22,12 +22,19 @@ ROOT = Path(__file__).resolve().parent.parent
 
 FROZEN_FILES = {
     "analysis": "scripts/s56_cap_policy_analysis.py",
+    "builder": "scripts/s54_build_cap_policy.py",
+    "prompts": "data/cap_policy_prompts.jsonl",
     "nvml_logger": "scripts/s55_nvml_logger.py",
     "plan": "audit/cap_policy_plan.json",
     "seed_registry": "audit/seed_registry.json",
     "seed_registry_script": "scripts/s53_seed_registry.py",
     "runner_driver": "scripts/s57_run_cap_policy.py",
     "spec": "spec/CAP_POLICY_SPEC.md",
+}
+# pre-amendment copies; each must match the frozen digest of its key
+PRE_AMENDMENT = {
+    "runner_driver": "audit/s57_run_cap_policy.py.as_frozen_20260830",
+    "spec": "audit/CAP_POLICY_SPEC.md.as_frozen_20260830",
 }
 
 
@@ -79,6 +86,12 @@ def main() -> int:
         else:
             status = "MISMATCH"
             failures.append(f"frozen digest: {rel}")
+        print(f"    {key:22s} {rel:40s} {status}")
+    for key, rel in PRE_AMENDMENT.items():
+        got = sha(ROOT / rel)
+        status = "MATCH (frozen, pre-amendment copy)" if got == hashes["sha256"][key] else "MISMATCH"
+        if status == "MISMATCH":
+            failures.append(f"pre-amendment copy: {rel}")
         print(f"    {key:22s} {rel:40s} {status}")
     print("[3] S4 frozen digests checked")
 
