@@ -1,0 +1,63 @@
+{
+  "name": "goedel_block2",
+  "variants": {
+    "uniform": {
+      "primary_tokens": 996402,
+      "primary_deficit": 0,
+      "primary_savings": 0.0,
+      "parity_orderings": 24,
+      "median_savings": 0.0
+    },
+    "timeout_only": {
+      "primary_tokens": 883802,
+      "primary_deficit": 0,
+      "primary_savings": 0.11300659773866373,
+      "parity_orderings": 24,
+      "median_savings": 0.11798994217767694
+    },
+    "trunccap_only": {
+      "primary_tokens": 763805,
+      "primary_deficit": 0,
+      "primary_savings": 0.23343690598774391,
+      "parity_orderings": 20,
+      "median_savings": 0.20464767947251394
+    },
+    "coarse": {
+      "primary_tokens": 651205,
+      "primary_deficit": 0,
+      "primary_savings": 0.34644350372640764,
+      "parity_orderings": 20,
+      "median_savings": 0.32564459371218807
+    },
+    "classorder": {
+      "primary_tokens": 857933,
+      "primary_deficit": 0,
+      "primary_savings": 0.13896901049977817,
+      "parity_orderings": 24,
+      "median_savings": 0.1475366942539632
+    },
+    "p_only": {
+      "primary_tokens": 658880,
+      "primary_deficit": 0,
+      "primary_savings": 0.33874078936011776,
+      "parity_orderings": 20,
+      "median_savings": 0.3210865641302363
+    },
+    "cost_only": {
+      "primary_tokens": 658880,
+      "primary_deficit": 0,
+      "primary_savings": 0.33874078936011776,
+      "parity_orderings": 20,
+      "median_savings": 0.3210865641302363
+    },
+    "rules": {
+      "primary_tokens": 658880,
+      "primary_deficit": 0,
+      "primary_savings": 0.33874078936011776,
+      "parity_orderings": 20,
+      "median_savings": 0.3210865641302363
+    }
+  },
+  "uniform_target": 15,
+  "Tu": 996402
+}

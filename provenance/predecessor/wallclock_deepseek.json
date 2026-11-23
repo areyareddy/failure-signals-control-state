@@ -1,0 +1,24 @@
+{
+  "name": "deepseek",
+  "target_solves": 10,
+  "policies": {
+    "uniform": {
+      "solves": 10,
+      "calls": 79,
+      "completion_tokens": 100254,
+      "prompt_tokens": 15899,
+      "generation_s": 628.1,
+      "verification_s": 142.5,
+      "total_s": 770.6
+    },
+    "rules": {
+      "solves": 10,
+      "calls": 79,
+      "completion_tokens": 100254,
+      "prompt_tokens": 15899,
+      "generation_s": 628.1,
+      "verification_s": 142.5,
+      "total_s": 770.6
+    }
+  }
+}

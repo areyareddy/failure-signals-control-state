@@ -1,0 +1,116 @@
+{
+  "blocks": {
+    "block1": {
+      "calibrated_savings_vs_uniform_tokens_to_target": -0.21098222982039117,
+      "calibrated_tokens_to_target": 888976,
+      "draw_labels_primary_order": [
+        "F0",
+        "F1",
+        "F2",
+        "F3"
+      ],
+      "matched_budget_slices": [
+        {
+          "budget_tokens": 249312,
+          "calibrated_solves": 4,
+          "fraction_uniform_full_spend": 0.25,
+          "rules_solves": 7,
+          "rules_tokens_issued": 238893,
+          "uniform_solves": 6
+        },
+        {
+          "budget_tokens": 498624,
+          "calibrated_solves": 10,
+          "fraction_uniform_full_spend": 0.5,
+          "rules_solves": 11,
+          "rules_tokens_issued": 495616,
+          "uniform_solves": 11
+        },
+        {
+          "budget_tokens": 747936,
+          "calibrated_solves": 10,
+          "fraction_uniform_full_spend": 0.75,
+          "rules_solves": 14,
+          "rules_tokens_issued": 686576,
+          "uniform_solves": 14
+        },
+        {
+          "budget_tokens": 997248,
+          "calibrated_solves": 14,
+          "fraction_uniform_full_spend": 1.0,
+          "rules_solves": 14,
+          "rules_tokens_issued": 686576,
+          "uniform_solves": 14
+        }
+      ],
+      "registered_equal_yield": {
+        "rules_tokens_to_target": 532270,
+        "savings": 0.2749303564252583,
+        "target_solves": 14,
+        "uniform_tokens_to_target": 734095
+      },
+      "rules_exhausted_solves": 14,
+      "rules_exhausted_spend_tokens": 686576,
+      "uniform_full_spend_solves": 14,
+      "uniform_full_spend_tokens": 997248,
+      "unissued_at_uniform_full_spend": 310672
+    },
+    "block2": {
+      "calibrated_savings_vs_uniform_tokens_to_target": 0.09477901489559437,
+      "calibrated_tokens_to_target": 901964,
+      "draw_labels_primary_order": [
+        "D0",
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "matched_budget_slices": [
+        {
+          "budget_tokens": 253641,
+          "calibrated_solves": 6,
+          "fraction_uniform_full_spend": 0.25,
+          "rules_solves": 5,
+          "rules_tokens_issued": 248026,
+          "uniform_solves": 3
+        },
+        {
+          "budget_tokens": 507282,
+          "calibrated_solves": 11,
+          "fraction_uniform_full_spend": 0.5,
+          "rules_solves": 12,
+          "rules_tokens_issued": 504572,
+          "uniform_solves": 10
+        },
+        {
+          "budget_tokens": 760923,
+          "calibrated_solves": 11,
+          "fraction_uniform_full_spend": 0.75,
+          "rules_solves": 15,
+          "rules_tokens_issued": 669367,
+          "uniform_solves": 13
+        },
+        {
+          "budget_tokens": 1014564,
+          "calibrated_solves": 15,
+          "fraction_uniform_full_spend": 1.0,
+          "rules_solves": 15,
+          "rules_tokens_issued": 669367,
+          "uniform_solves": 15
+        }
+      ],
+      "registered_equal_yield": {
+        "rules_tokens_to_target": 658880,
+        "savings": 0.33874078936011776,
+        "target_solves": 15,
+        "uniform_tokens_to_target": 996402
+      },
+      "rules_exhausted_solves": 15,
+      "rules_exhausted_spend_tokens": 669367,
+      "uniform_full_spend_solves": 15,
+      "uniform_full_spend_tokens": 1014564,
+      "unissued_at_uniform_full_spend": 345197
+    }
+  },
+  "root_count": 40,
+  "status": "descriptive_post_hoc_complement_to_registered_equal_yield_endpoint"
+}

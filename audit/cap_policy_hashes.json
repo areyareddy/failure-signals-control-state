@@ -1,0 +1,52 @@
+{
+  "amendments": [
+    {
+      "blinding_impact": "The analysis script scripts/s56_cap_policy_analysis.py was NOT modified and its recorded hash still verifies. Diagnosing this defect required reading audit/telemetry/cap_policy.markers.csv, which records per-cohort wall seconds tagged by cap; that is cost-endpoint information, so the run is no longer blind on the cost side to the operator. No outcome column (verified, outcome_state, finish_reason, token counts) was queried, and the frozen analysis was not altered after this exposure.",
+      "data_impact": "None on generated data. No branch was produced under wrong settings; blocks 2 and 3 were never started. The 55 block-1 branches ran with the correct seed_block=1 and are unaffected. Caps, seeds, execution order, prompts, roots and the analysis script are untouched.",
+      "design_changed": false,
+      "fix": "s57 now passes --block from the already-frozen plan (audit/cap_policy_plan.json, every step carries 'block'), and aborts with rc=3 if a cohort's non-done count is unchanged after its runner returns.",
+      "frozen_copies": {
+        "runner_driver_pre_fix": "audit/s57_run_cap_policy.py.as_frozen_20260830",
+        "spec_pre_amendment": "audit/CAP_POLICY_SPEC.md.as_frozen_20260830"
+      },
+      "kind": "execution_defect_fix",
+      "sha256_after": {
+        "analysis": "9d8f2a34b917940c155f3f04356e70afb3d2fc5cbbe4a89c435600797cb63157",
+        "plan": "cad1edc9c82d0b5f60daa1746d3bc09c467300c21c611ec30b636da18ba2e5c5",
+        "prompts": "02d12f7a1e9cdd0f6a9786ece0ff53884c98d14711d55f99e7392199ebdaa591",
+        "runner_driver": "48a160319ffeb60b873da1de9b76351308e1d8983308256d1b2b4a771d594e6a",
+        "spec": "9fa16282cf05190b7590cd0c8206578e49d0564ac5a2b7576df25d970dd78b81"
+      },
+      "what": "scripts/s57_run_cap_policy.py invoked the frozen scripts/s12_run.py without --block. s12_run.py --block defaults to 1, and src/runner.py claim() filters 'WHERE cohort=? AND seed_block=? AND status=pending', so all 14 block-2 and block-3 cohorts matched zero rows. Each returned rc=0 in 0.0 min and the driver exited normally at 2026-08-30T03:33:43Z having generated only block 1 (55/165 branches).",
+      "when_utc": "2026-08-30T03:39:00+00:00"
+    }
+  ],
+  "captured_utc": "2026-08-30T02:59:29+00:00",
+  "freeze_timing": {
+    "after_generation_started_before_outcomes_opened": [
+      "analysis"
+    ],
+    "before_generation": [
+      "spec",
+      "builder",
+      "plan",
+      "seed_registry",
+      "prompts",
+      "nvml_logger",
+      "seed_registry_script",
+      "runner_driver"
+    ],
+    "statement": "The specification, builder, execution plan, prompts and seed collision proof were written and fixed before any branch was generated. The analysis script was written after generation began but before any outcome was inspected: the run is blinded (s12_run.py --blind withholds outcomes, token counts and wall times) and no outcome query was made against cap_policy.sqlite before this hash was recorded. This is weaker than freezing the analysis pre-generation and is recorded as such."
+  },
+  "sha256": {
+    "analysis": "9d8f2a34b917940c155f3f04356e70afb3d2fc5cbbe4a89c435600797cb63157",
+    "builder": "bfdf8759c678983500e4f90cebae8d397b3b48bce356ca4a74f0dafe8759a76a",
+    "nvml_logger": "42c682abe6deea573587efcc4e5090a750f0bc2cac5bbc1b75f2601196309f17",
+    "plan": "cad1edc9c82d0b5f60daa1746d3bc09c467300c21c611ec30b636da18ba2e5c5",
+    "prompts": "02d12f7a1e9cdd0f6a9786ece0ff53884c98d14711d55f99e7392199ebdaa591",
+    "runner_driver": "1beed7543c074b32a0b2613bcc2a86eadd296853bbd773f20aee0f2004dbde38",
+    "seed_registry": "652a79522b4e7711d75932b1c94cd3df288dc7dc811c33054d54dea7ce97a935",
+    "seed_registry_script": "8b276f096568095f0461e3948bf70eade881275ced5ae84387694c7e352fa0aa",
+    "spec": "997191ad145661357c8dba966381e2c10b10ff7a3d4d500c8d4d7590a20c0b0e"
+  }
+}

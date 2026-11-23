@@ -1,0 +1,4997 @@
+{
+  "status": "added control analyses; post hoc and descriptive unless stated",
+  "class_order_formula": {
+    "rho_class": "p_shrunk / max(1, mean completion tokens of class)",
+    "p_shrunk": "(rescues + 8 * global_rate) / (attempts + 8), fit on 43 dev roots x 4 historical draws",
+    "frozen_order": [
+      "unknown_identifier",
+      "unsolved_goals",
+      "linarith_failed",
+      "other",
+      "simp_failed",
+      "truncated",
+      "timeout"
+    ],
+    "p_shrunk_values": {
+      "truncated": 0.054161566707466344,
+      "other": 0.1558139534883721,
+      "linarith_failed": 0.20718816067653278,
+      "unsolved_goals": 0.25264270613107825,
+      "simp_failed": 0.09302325581395349,
+      "timeout": 0.05581395348837209,
+      "unknown_identifier": 0.17635658914728683
+    },
+    "mean_tokens": {
+      "truncated": 9525.573529411764,
+      "other": 8321.583333333334,
+      "linarith_failed": 7339.305555555556,
+      "unsolved_goals": 6349.638888888889,
+      "simp_failed": 8218.25,
+      "timeout": 10007.75,
+      "unknown_identifier": 2379.5
+    },
+    "global_rate": 0.13953488372093023,
+    "rho_e5": {
+      "truncated": 0.5685911356437873,
+      "other": 1.8724075364869115,
+      "linarith_failed": 2.8229940708722743,
+      "unsolved_goals": 3.978851562301801,
+      "simp_failed": 1.1319107573261156,
+      "timeout": 0.5577073117171402,
+      "unknown_identifier": 7.411497757818316
+    }
+  },
+  "ledgers": {
+    "historical_dev43": {
+      "truncated": {
+        "theorems": 17,
+        "attempts": 68,
+        "rescues": 3,
+        "tokens": 647739,
+        "p": 0.04411764705882353,
+        "rho_e5": 0.46314950929309495
+      },
+      "other": {
+        "theorems": 3,
+        "attempts": 12,
+        "rescues": 2,
+        "tokens": 99859,
+        "p": 0.16666666666666666,
+        "rho_e5": 2.0028239818143585
+      },
+      "linarith_failed": {
+        "theorems": 9,
+        "attempts": 36,
+        "rescues": 8,
+        "tokens": 264215,
+        "p": 0.2222222222222222,
+        "rho_e5": 3.02783717805575
+      },
+      "unsolved_goals": {
+        "theorems": 9,
+        "attempts": 36,
+        "rescues": 10,
+        "tokens": 228587,
+        "p": 0.2777777777777778,
+        "rho_e5": 4.37470197342806
+      },
+      "simp_failed": {
+        "theorems": 1,
+        "attempts": 4,
+        "rescues": 0,
+        "tokens": 32873,
+        "p": 0.0,
+        "rho_e5": 0.0
+      },
+      "timeout": {
+        "theorems": 3,
+        "attempts": 12,
+        "rescues": 0,
+        "tokens": 120093,
+        "p": 0.0,
+        "rho_e5": 0.0
+      },
+      "unknown_identifier": {
+        "theorems": 1,
+        "attempts": 4,
+        "rescues": 1,
+        "tokens": 9518,
+        "p": 0.25,
+        "rho_e5": 10.506408909434755
+      },
+      "all": {
+        "theorems": 43,
+        "attempts": 172,
+        "rescues": 24,
+        "tokens": 1402884,
+        "p": 0.13953488372093023,
+        "rho_e5": 1.71076154550198
+      }
+    },
+    "historical_heldout40": {
+      "simp_failed": {
+        "theorems": 1,
+        "attempts": 4,
+        "rescues": 1,
+        "tokens": 23963,
+        "p": 0.25,
+        "rho_e5": 4.173100196135709
+      },
+      "linarith_failed": {
+        "theorems": 8,
+        "attempts": 32,
+        "rescues": 4,
+        "tokens": 231775,
+        "p": 0.125,
+        "rho_e5": 1.7258116708014237
+      },
+      "truncated": {
+        "theorems": 15,
+        "attempts": 60,
+        "rescues": 12,
+        "tokens": 497144,
+        "p": 0.2,
+        "rho_e5": 2.413787554511369
+      },
+      "other": {
+        "theorems": 3,
+        "attempts": 12,
+        "rescues": 7,
+        "tokens": 48805,
+        "p": 0.5833333333333334,
+        "rho_e5": 14.342792746644811
+      },
+      "unsolved_goals": {
+        "theorems": 9,
+        "attempts": 36,
+        "rescues": 4,
+        "tokens": 186797,
+        "p": 0.1111111111111111,
+        "rho_e5": 2.141362013308565
+      },
+      "timeout": {
+        "theorems": 3,
+        "attempts": 12,
+        "rescues": 0,
+        "tokens": 96859,
+        "p": 0.0,
+        "rho_e5": 0.0
+      },
+      "unknown_identifier": {
+        "theorems": 1,
+        "attempts": 4,
+        "rescues": 3,
+        "tokens": 6225,
+        "p": 0.75,
+        "rho_e5": 48.192771084337345
+      },
+      "all": {
+        "theorems": 40,
+        "attempts": 160,
+        "rescues": 31,
+        "tokens": 1091568,
+        "p": 0.19375,
+        "rho_e5": 2.839951336059687
+      }
+    },
+    "block1": {
+      "simp_failed": {
+        "theorems": 1,
+        "attempts": 4,
+        "rescues": 2,
+        "tokens": 17607,
+        "p": 0.5,
+        "rho_e5": 11.359118532401885
+      },
+      "linarith_failed": {
+        "theorems": 8,
+        "attempts": 32,
+        "rescues": 6,
+        "tokens": 237059,
+        "p": 0.1875,
+        "rho_e5": 2.531015485596413
+      },
+      "truncated": {
+        "theorems": 15,
+        "attempts": 60,
+        "rescues": 14,
+        "tokens": 525822,
+        "p": 0.23333333333333334,
+        "rho_e5": 2.662497955581927
+      },
+      "other": {
+        "theorems": 3,
+        "attempts": 12,
+        "rescues": 5,
+        "tokens": 60243,
+        "p": 0.4166666666666667,
+        "rho_e5": 8.299719469481932
+      },
+      "unsolved_goals": {
+        "theorems": 9,
+        "attempts": 36,
+        "rescues": 6,
+        "tokens": 214617,
+        "p": 0.16666666666666666,
+        "rho_e5": 2.7956778819944366
+      },
+      "timeout": {
+        "theorems": 3,
+        "attempts": 12,
+        "rescues": 0,
+        "tokens": 108272,
+        "p": 0.0,
+        "rho_e5": 0.0
+      },
+      "unknown_identifier": {
+        "theorems": 1,
+        "attempts": 4,
+        "rescues": 2,
+        "tokens": 8968,
+        "p": 0.5,
+        "rho_e5": 22.301516503122212
+      },
+      "all": {
+        "theorems": 40,
+        "attempts": 160,
+        "rescues": 35,
+        "tokens": 1172588,
+        "p": 0.21875,
+        "rho_e5": 2.9848506039631992
+      }
+    },
+    "block2": {
+      "simp_failed": {
+        "theorems": 1,
+        "attempts": 4,
+        "rescues": 2,
+        "tokens": 17025,
+        "p": 0.5,
+        "rho_e5": 11.747430249632892
+      },
+      "linarith_failed": {
+        "theorems": 8,
+        "attempts": 32,
+        "rescues": 5,
+        "tokens": 187693,
+        "p": 0.15625,
+        "rho_e5": 2.6639246002781136
+      },
+      "truncated": {
+        "theorems": 15,
+        "attempts": 60,
+        "rescues": 12,
+        "tokens": 543234,
+        "p": 0.2,
+        "rho_e5": 2.2089928097284046
+      },
+      "other": {
+        "theorems": 3,
+        "attempts": 12,
+        "rescues": 5,
+        "tokens": 59601,
+        "p": 0.4166666666666667,
+        "rho_e5": 8.389120987902887
+      },
+      "unsolved_goals": {
+        "theorems": 9,
+        "attempts": 36,
+        "rescues": 4,
+        "tokens": 200634,
+        "p": 0.1111111111111111,
+        "rho_e5": 1.9936800342912966
+      },
+      "timeout": {
+        "theorems": 3,
+        "attempts": 12,
+        "rescues": 0,
+        "tokens": 112600,
+        "p": 0.0,
+        "rho_e5": 0.0
+      },
+      "unknown_identifier": {
+        "theorems": 1,
+        "attempts": 4,
+        "rescues": 3,
+        "tokens": 6114,
+        "p": 0.75,
+        "rho_e5": 49.06771344455348
+      },
+      "all": {
+        "theorems": 40,
+        "attempts": 160,
+        "rescues": 31,
+        "tokens": 1126901,
+        "p": 0.19375,
+        "rho_e5": 2.750907133812109
+      }
+    }
+  },
+  "persistence": {
+    "historical_dev43": {
+      "stage1_truncated": {
+        "truncated_attempts": 34,
+        "attempts": 68,
+        "rate": 0.5,
+        "roots_with_any_truncated_retry": 16
+      },
+      "stage1_other": {
+        "truncated_attempts": 25,
+        "attempts": 104,
+        "rate": 0.2403846153846154,
+        "roots_with_any_truncated_retry": 17
+      }
+    },
+    "historical_heldout40": {
+      "stage1_truncated": {
+        "truncated_attempts": 23,
+        "attempts": 60,
+        "rate": 0.38333333333333336,
+        "roots_with_any_truncated_retry": 11
+      },
+      "stage1_other": {
+        "truncated_attempts": 13,
+        "attempts": 100,
+        "rate": 0.13,
+        "roots_with_any_truncated_retry": 10
+      }
+    },
+    "block1": {
+      "stage1_truncated": {
+        "truncated_attempts": 26,
+        "attempts": 60,
+        "rate": 0.43333333333333335,
+        "roots_with_any_truncated_retry": 13
+      },
+      "stage1_other": {
+        "truncated_attempts": 20,
+        "attempts": 100,
+        "rate": 0.2,
+        "roots_with_any_truncated_retry": 15
+      }
+    },
+    "block2": {
+      "stage1_truncated": {
+        "truncated_attempts": 26,
+        "attempts": 60,
+        "rate": 0.43333333333333335,
+        "roots_with_any_truncated_retry": 11
+      },
+      "stage1_other": {
+        "truncated_attempts": 18,
+        "attempts": 100,
+        "rate": 0.18,
+        "roots_with_any_truncated_retry": 12
+      }
+    }
+  },
+  "blocks": {
+    "block1": {
+      "summary": {
+        "timeout_only": {
+          "primary_saving": 0.1081780968403272,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.1085707868052882,
+          "parity_orderings": 24,
+          "median_saving_over_parity_orderings": 0.1074809704578677,
+          "min_saving_over_parity_orderings": 0.07563903599293897,
+          "median_exhaustion_saving_all24": 0.1078929210609248,
+          "deficit_histogram_all24": {
+            "0": 24
+          },
+          "mean_final_solves_all24": 14,
+          "mean_uniform_target_all24": 14
+        },
+        "trunccap_only": {
+          "primary_saving": 0.13709124840790365,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.20295854190732898,
+          "parity_orderings": 12,
+          "median_saving_over_parity_orderings": 0.13147495351113692,
+          "min_saving_over_parity_orderings": 0.0,
+          "median_exhaustion_saving_all24": 0.20834719229491772,
+          "deficit_histogram_all24": {
+            "0": 12,
+            "1": 12
+          },
+          "mean_final_solves_all24": 13.5,
+          "mean_uniform_target_all24": 14
+        },
+        "coarse": {
+          "primary_saving": 0.24526934524823085,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.31152932871261707,
+          "parity_orderings": 12,
+          "median_saving_over_parity_orderings": 0.2444961408833039,
+          "min_saving_over_parity_orderings": 0.11249095338377046,
+          "median_exhaustion_saving_all24": 0.31650356411577735,
+          "deficit_histogram_all24": {
+            "0": 12,
+            "1": 12
+          },
+          "mean_final_solves_all24": 13.5,
+          "mean_uniform_target_all24": 14
+        },
+        "rules": {
+          "primary_saving": 0.2749303564252583,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.31152932871261707,
+          "parity_orderings": 12,
+          "median_saving_over_parity_orderings": 0.1781423071747778,
+          "min_saving_over_parity_orderings": 0.013069360910555106,
+          "median_exhaustion_saving_all24": 0.31650356411577735,
+          "deficit_histogram_all24": {
+            "0": 12,
+            "1": 12
+          },
+          "mean_final_solves_all24": 13.5,
+          "mean_uniform_target_all24": 14
+        },
+        "uniform_cap1": {
+          "primary_saving": null,
+          "primary_deficit": 5,
+          "primary_exhaustion_saving": 0.6768476848286484,
+          "parity_orderings": 0,
+          "median_saving_over_parity_orderings": null,
+          "min_saving_over_parity_orderings": null,
+          "median_exhaustion_saving_all24": 0.7006831636742387,
+          "deficit_histogram_all24": {
+            "5": 18,
+            "6": 6
+          },
+          "mean_final_solves_all24": 8.75,
+          "mean_uniform_target_all24": 14
+        },
+        "uniform_cap2": {
+          "primary_saving": null,
+          "primary_deficit": 1,
+          "primary_exhaustion_saving": 0.42802492459247854,
+          "parity_orderings": 0,
+          "median_saving_over_parity_orderings": null,
+          "min_saving_over_parity_orderings": null,
+          "median_exhaustion_saving_all24": 0.458736237739748,
+          "deficit_histogram_all24": {
+            "1": 12,
+            "2": 8,
+            "4": 4
+          },
+          "mean_final_solves_all24": 12.166666666666666,
+          "mean_uniform_target_all24": 14
+        },
+        "uniform_cap3": {
+          "primary_saving": 0.0,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.23431884546271342,
+          "parity_orderings": 12,
+          "median_saving_over_parity_orderings": 0.0,
+          "min_saving_over_parity_orderings": 0.0,
+          "median_exhaustion_saving_all24": 0.2330051632370208,
+          "deficit_histogram_all24": {
+            "0": 12,
+            "1": 12
+          },
+          "mean_final_solves_all24": 13.5,
+          "mean_uniform_target_all24": 14
+        },
+        "timeout_plus_uniform_cap2": {
+          "primary_saving": null,
+          "primary_deficit": 1,
+          "primary_exhaustion_saving": 0.48586309523809523,
+          "parity_orderings": 0,
+          "median_saving_over_parity_orderings": null,
+          "min_saving_over_parity_orderings": null,
+          "median_exhaustion_saving_all24": 0.5120840736113728,
+          "deficit_histogram_all24": {
+            "1": 12,
+            "2": 8,
+            "4": 4
+          },
+          "mean_final_solves_all24": 12.166666666666666,
+          "mean_uniform_target_all24": 14
+        },
+        "timeout_plus_uniform_cap3": {
+          "primary_saving": 0.1081780968403272,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.31395099313310226,
+          "parity_orderings": 12,
+          "median_saving_over_parity_orderings": 0.1074809704578677,
+          "min_saving_over_parity_orderings": 0.07563903599293897,
+          "median_exhaustion_saving_all24": 0.3069467800790029,
+          "deficit_histogram_all24": {
+            "0": 12,
+            "1": 12
+          },
+          "mean_final_solves_all24": 13.5,
+          "mean_uniform_target_all24": 14
+        }
+      },
+      "per_ordering": [
+        {
+          "ordering": "0123",
+          "primary": true,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 734095,
+          "uniform_full_spend": 997248,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 654682,
+              "saving_at_target": 0.1081780968403272,
+              "exhaustion_tokens": 888976,
+              "exhaustion_saving_vs_uniform_full": 0.1085707868052882,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 633457,
+              "saving_at_target": 0.13709124840790365,
+              "exhaustion_tokens": 794848,
+              "exhaustion_saving_vs_uniform_full": 0.20295854190732898,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 554044,
+              "saving_at_target": 0.24526934524823085,
+              "exhaustion_tokens": 686576,
+              "exhaustion_saving_vs_uniform_full": 0.31152932871261707,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 532270,
+              "saving_at_target": 0.2749303564252583,
+              "exhaustion_tokens": 686576,
+              "exhaustion_saving_vs_uniform_full": 0.31152932871261707,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322263,
+              "exhaustion_saving_vs_uniform_full": 0.6768476848286484,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 570401,
+              "exhaustion_saving_vs_uniform_full": 0.42802492459247854,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 734095,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 763574,
+              "exhaustion_saving_vs_uniform_full": 0.23431884546271342,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 512722,
+              "exhaustion_saving_vs_uniform_full": 0.48586309523809523,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 654682,
+              "saving_at_target": 0.1081780968403272,
+              "exhaustion_tokens": 684161,
+              "exhaustion_saving_vs_uniform_full": 0.31395099313310226,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "0132",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 768199,
+          "uniform_full_spend": 998078,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 681661,
+              "saving_at_target": 0.11265049811311911,
+              "exhaustion_tokens": 889806,
+              "exhaustion_saving_vs_uniform_full": 0.10848049952007754,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 666437,
+              "saving_at_target": 0.13246827970356634,
+              "exhaustion_tokens": 795678,
+              "exhaustion_saving_vs_uniform_full": 0.20278976192241494,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 579899,
+              "saving_at_target": 0.24511877781668556,
+              "exhaustion_tokens": 687406,
+              "exhaustion_saving_vs_uniform_full": 0.3112702614424925,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 544291,
+              "saving_at_target": 0.29147135052245576,
+              "exhaustion_tokens": 687406,
+              "exhaustion_saving_vs_uniform_full": 0.3112702614424925,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322263,
+              "exhaustion_saving_vs_uniform_full": 0.6771164177549249,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 570401,
+              "exhaustion_saving_vs_uniform_full": 0.4285005781111296,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 768199,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 807233,
+              "exhaustion_saving_vs_uniform_full": 0.19121251044507548,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 512722,
+              "exhaustion_saving_vs_uniform_full": 0.4862906506305118,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 681661,
+              "saving_at_target": 0.11265049811311911,
+              "exhaustion_tokens": 720695,
+              "exhaustion_saving_vs_uniform_full": 0.27791715677532214,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "0213",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 562527,
+          "uniform_full_spend": 1013147,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 519978,
+              "saving_at_target": 0.07563903599293897,
+              "exhaustion_tokens": 904875,
+              "exhaustion_saving_vs_uniform_full": 0.10686701929729847,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 804899,
+              "exhaustion_saving_vs_uniform_full": 0.20554569080301277,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 696627,
+              "exhaustion_saving_vs_uniform_full": 0.31241271010031124,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 696627,
+              "exhaustion_saving_vs_uniform_full": 0.31241271010031124,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322263,
+              "exhaustion_saving_vs_uniform_full": 0.6819188133607463,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 539390,
+              "exhaustion_saving_vs_uniform_full": 0.4676093400069289,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 562527,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 779473,
+              "exhaustion_saving_vs_uniform_full": 0.23064175287495303,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 496841,
+              "exhaustion_saving_vs_uniform_full": 0.5096062071940202,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 519978,
+              "saving_at_target": 0.07563903599293897,
+              "exhaustion_tokens": 700060,
+              "exhaustion_saving_vs_uniform_full": 0.3090242580790349,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "0231",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 806544,
+          "uniform_full_spend": 1023490,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 735136,
+              "saving_at_target": 0.08853577734134777,
+              "exhaustion_tokens": 915218,
+              "exhaustion_saving_vs_uniform_full": 0.1057870619156025,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 804040,
+              "exhaustion_saving_vs_uniform_full": 0.2144134285630539,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 695768,
+              "exhaustion_saving_vs_uniform_full": 0.3202004904786564,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 695768,
+              "exhaustion_saving_vs_uniform_full": 0.3202004904786564,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322263,
+              "exhaustion_saving_vs_uniform_full": 0.685133220647002,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 539390,
+              "exhaustion_saving_vs_uniform_full": 0.4729894771810179,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 788426,
+              "exhaustion_saving_vs_uniform_full": 0.22966907346432308,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 496841,
+              "exhaustion_saving_vs_uniform_full": 0.5145619400287252,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 717018,
+              "exhaustion_saving_vs_uniform_full": 0.2994381967581511,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "0312",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 595885,
+          "uniform_full_spend": 1003676,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 546211,
+              "saving_at_target": 0.08336172248000873,
+              "exhaustion_tokens": 895404,
+              "exhaustion_saving_vs_uniform_full": 0.10787544984636477,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 796552,
+              "exhaustion_saving_vs_uniform_full": 0.20636540078670806,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 688280,
+              "exhaustion_saving_vs_uniform_full": 0.31424085063307283,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 688280,
+              "exhaustion_saving_vs_uniform_full": 0.31424085063307283,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322263,
+              "exhaustion_saving_vs_uniform_full": 0.6789173000051809,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 577767,
+              "exhaustion_saving_vs_uniform_full": 0.4243490927351058,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 595885,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 812831,
+              "exhaustion_saving_vs_uniform_full": 0.19014602321864826,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 528093,
+              "exhaustion_saving_vs_uniform_full": 0.47384115989622144,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 546211,
+              "saving_at_target": 0.08336172248000873,
+              "exhaustion_tokens": 726293,
+              "exhaustion_saving_vs_uniform_full": 0.27636707463364674,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "0321",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 799018,
+          "uniform_full_spend": 1015964,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 727610,
+              "saving_at_target": 0.08936970130835598,
+              "exhaustion_tokens": 907692,
+              "exhaustion_saving_vs_uniform_full": 0.10657070526121004,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 796552,
+              "exhaustion_saving_vs_uniform_full": 0.21596434519333363,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 688280,
+              "exhaustion_saving_vs_uniform_full": 0.32253505045454367,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 688280,
+              "exhaustion_saving_vs_uniform_full": 0.32253505045454367,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322263,
+              "exhaustion_saving_vs_uniform_full": 0.6828007685311684,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 577767,
+              "exhaustion_saving_vs_uniform_full": 0.4313115425349717,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 780900,
+              "exhaustion_saving_vs_uniform_full": 0.23137040288829136,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 528093,
+              "exhaustion_saving_vs_uniform_full": 0.4802050072640369,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 709492,
+              "exhaustion_saving_vs_uniform_full": 0.3016563579024454,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "1023",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 722670,
+          "uniform_full_spend": 985823,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 643257,
+              "saving_at_target": 0.109888330773382,
+              "exhaustion_tokens": 877551,
+              "exhaustion_saving_vs_uniform_full": 0.1098290463906807,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 622032,
+              "saving_at_target": 0.13925858275561465,
+              "exhaustion_tokens": 783423,
+              "exhaustion_saving_vs_uniform_full": 0.2053106896471273,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 542619,
+              "saving_at_target": 0.24914691352899665,
+              "exhaustion_tokens": 675151,
+              "exhaustion_saving_vs_uniform_full": 0.315139736037808,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 520845,
+              "saving_at_target": 0.27927684835402056,
+              "exhaustion_tokens": 675151,
+              "exhaustion_saving_vs_uniform_full": 0.315139736037808,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 297866,
+              "exhaustion_saving_vs_uniform_full": 0.6978504254820592,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 558976,
+              "exhaustion_saving_vs_uniform_full": 0.43298543450497706,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 722670,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 752149,
+              "exhaustion_saving_vs_uniform_full": 0.23703443721641715,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 501297,
+              "exhaustion_saving_vs_uniform_full": 0.4914939091500198,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 643257,
+              "saving_at_target": 0.109888330773382,
+              "exhaustion_tokens": 672736,
+              "exhaustion_saving_vs_uniform_full": 0.3175894658574612,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "1032",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 756774,
+          "uniform_full_spend": 986653,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 670236,
+              "saving_at_target": 0.11435118014096679,
+              "exhaustion_tokens": 878381,
+              "exhaustion_saving_vs_uniform_full": 0.10973665513610154,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 655012,
+              "saving_at_target": 0.1344681503328603,
+              "exhaustion_tokens": 784253,
+              "exhaustion_saving_vs_uniform_full": 0.2051379765733241,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 568474,
+              "saving_at_target": 0.2488193304738271,
+              "exhaustion_tokens": 675981,
+              "exhaustion_saving_vs_uniform_full": 0.31487463170942576,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 532866,
+              "saving_at_target": 0.29587168692370514,
+              "exhaustion_tokens": 675981,
+              "exhaustion_saving_vs_uniform_full": 0.31487463170942576,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 297866,
+              "exhaustion_saving_vs_uniform_full": 0.6981046021245565,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 558976,
+              "exhaustion_saving_vs_uniform_full": 0.433462422959237,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 756774,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 795808,
+              "exhaustion_saving_vs_uniform_full": 0.1934266657071939,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 501297,
+              "exhaustion_saving_vs_uniform_full": 0.49192167864487313,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 670236,
+              "saving_at_target": 0.11435118014096679,
+              "exhaustion_tokens": 709270,
+              "exhaustion_saving_vs_uniform_full": 0.28113531302291683,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "1203",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 520913,
+          "uniform_full_spend": 991237,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 462315,
+              "saving_at_target": 0.11249095338377046,
+              "exhaustion_tokens": 882965,
+              "exhaustion_saving_vs_uniform_full": 0.10922917526282816,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 520913,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 783173,
+              "exhaustion_saving_vs_uniform_full": 0.20990338334828096,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 462315,
+              "saving_at_target": 0.11249095338377046,
+              "exhaustion_tokens": 674901,
+              "exhaustion_saving_vs_uniform_full": 0.3191325586111091,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 514105,
+              "saving_at_target": 0.013069360910555106,
+              "exhaustion_tokens": 674901,
+              "exhaustion_saving_vs_uniform_full": 0.3191325586111091,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 297866,
+              "exhaustion_saving_vs_uniform_full": 0.699500724851877,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 511458,
+              "exhaustion_saving_vs_uniform_full": 0.4840204713907975,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 520913,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 757563,
+              "exhaustion_saving_vs_uniform_full": 0.23573978776014215,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 452860,
+              "exhaustion_saving_vs_uniform_full": 0.543136505195024,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 462315,
+              "saving_at_target": 0.11249095338377046,
+              "exhaustion_tokens": 678150,
+              "exhaustion_saving_vs_uniform_full": 0.3158548359272303,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "1230",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 765369,
+          "uniform_full_spend": 1002019,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 677912,
+              "saving_at_target": 0.11426775842763426,
+              "exhaustion_tokens": 893747,
+              "exhaustion_saving_vs_uniform_full": 0.10805383929845647,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 663607,
+              "saving_at_target": 0.1329580894967003,
+              "exhaustion_tokens": 793955,
+              "exhaustion_saving_vs_uniform_full": 0.20764476521902275,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 576150,
+              "saving_at_target": 0.24722584792433455,
+              "exhaustion_tokens": 685683,
+              "exhaustion_saving_vs_uniform_full": 0.3156986045174792,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 627940,
+              "saving_at_target": 0.179559140754329,
+              "exhaustion_tokens": 685683,
+              "exhaustion_saving_vs_uniform_full": 0.3156986045174792,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 297866,
+              "exhaustion_saving_vs_uniform_full": 0.7027341796912034,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 511458,
+              "exhaustion_saving_vs_uniform_full": 0.48957255301546176,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 755914,
+              "exhaustion_saving_vs_uniform_full": 0.24560911519641848,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 452860,
+              "exhaustion_saving_vs_uniform_full": 0.5480524820387638,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 668457,
+              "exhaustion_saving_vs_uniform_full": 0.33288989530138646,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "1302",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 627070,
+          "uniform_full_spend": 1008053,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 561347,
+              "saving_at_target": 0.10480967037172884,
+              "exhaustion_tokens": 899781,
+              "exhaustion_saving_vs_uniform_full": 0.10740705101815085,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 602494,
+              "saving_at_target": 0.039191796769100784,
+              "exhaustion_tokens": 801113,
+              "exhaustion_saving_vs_uniform_full": 0.20528682519669106,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 536771,
+              "saving_at_target": 0.14400146714082962,
+              "exhaustion_tokens": 692841,
+              "exhaustion_saving_vs_uniform_full": 0.3126938762148419,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 578913,
+              "saving_at_target": 0.07679684883665305,
+              "exhaustion_tokens": 692841,
+              "exhaustion_saving_vs_uniform_full": 0.3126938762148419,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 297866,
+              "exhaustion_saving_vs_uniform_full": 0.7045135523628222,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 566093,
+              "exhaustion_saving_vs_uniform_full": 0.43842932861665007,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 627070,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 817208,
+              "exhaustion_saving_vs_uniform_full": 0.1893204027962816,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 500370,
+              "exhaustion_saving_vs_uniform_full": 0.5036272894381546,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 561347,
+              "saving_at_target": 0.10480967037172884,
+              "exhaustion_tokens": 730670,
+              "exhaustion_saving_vs_uniform_full": 0.27516707950871633,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "1320",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 782874,
+          "uniform_full_spend": 1019524,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 695417,
+              "saving_at_target": 0.11171274049208424,
+              "exhaustion_tokens": 911252,
+              "exhaustion_saving_vs_uniform_full": 0.10619857894468399,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 682236,
+              "saving_at_target": 0.12854942174602813,
+              "exhaustion_tokens": 812584,
+              "exhaustion_saving_vs_uniform_full": 0.2029770755764455,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 594779,
+              "saving_at_target": 0.24026216223811236,
+              "exhaustion_tokens": 704312,
+              "exhaustion_saving_vs_uniform_full": 0.3091756545211295,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 646569,
+              "saving_at_target": 0.17410847722622036,
+              "exhaustion_tokens": 704312,
+              "exhaustion_saving_vs_uniform_full": 0.3091756545211295,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 297866,
+              "exhaustion_saving_vs_uniform_full": 0.7078381676154755,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 566093,
+              "exhaustion_saving_vs_uniform_full": 0.44474774502611025,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 773419,
+              "exhaustion_saving_vs_uniform_full": 0.24139206139335612,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 500370,
+              "exhaustion_saving_vs_uniform_full": 0.5092121421369188,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 685962,
+              "exhaustion_saving_vs_uniform_full": 0.3271742499440916,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "2013",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 550073,
+          "uniform_full_spend": 1000693,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 507524,
+              "saving_at_target": 0.07735155152134354,
+              "exhaustion_tokens": 892421,
+              "exhaustion_saving_vs_uniform_full": 0.10819701946551041,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 792445,
+              "exhaustion_saving_vs_uniform_full": 0.2081037840776342,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 684173,
+              "exhaustion_saving_vs_uniform_full": 0.3163008035431446,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 684173,
+              "exhaustion_saving_vs_uniform_full": 0.3163008035431446,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 251169,
+              "exhaustion_saving_vs_uniform_full": 0.7490049395768732,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 526936,
+              "exhaustion_saving_vs_uniform_full": 0.4734289137627624,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 550073,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 767019,
+              "exhaustion_saving_vs_uniform_full": 0.23351217606198904,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 484387,
+              "exhaustion_saving_vs_uniform_full": 0.5159484477257261,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 507524,
+              "saving_at_target": 0.07735155152134354,
+              "exhaustion_tokens": 687606,
+              "exhaustion_saving_vs_uniform_full": 0.3128701809645915,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "2031",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 794090,
+          "uniform_full_spend": 1011036,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 722682,
+              "saving_at_target": 0.08992431588359007,
+              "exhaustion_tokens": 902764,
+              "exhaustion_saving_vs_uniform_full": 0.10709015307071168,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 791586,
+              "exhaustion_saving_vs_uniform_full": 0.2170545855933913,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 683314,
+              "exhaustion_saving_vs_uniform_full": 0.324144738664103,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 683314,
+              "exhaustion_saving_vs_uniform_full": 0.324144738664103,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 251169,
+              "exhaustion_saving_vs_uniform_full": 0.7515726442975325,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 526936,
+              "exhaustion_saving_vs_uniform_full": 0.4788157889531134,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 775972,
+              "exhaustion_saving_vs_uniform_full": 0.23249815041205257,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 484387,
+              "exhaustion_saving_vs_uniform_full": 0.5209003438057596,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 704564,
+              "exhaustion_saving_vs_uniform_full": 0.3031266938071444,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "2103",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 508832,
+          "uniform_full_spend": 979156,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 450234,
+              "saving_at_target": 0.11516178227784413,
+              "exhaustion_tokens": 870884,
+              "exhaustion_saving_vs_uniform_full": 0.1105768641564776,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 508832,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 771092,
+              "exhaustion_saving_vs_uniform_full": 0.21249320843665365,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 450234,
+              "saving_at_target": 0.11516178227784413,
+              "exhaustion_tokens": 662820,
+              "exhaustion_saving_vs_uniform_full": 0.32307007259313125,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 502024,
+              "saving_at_target": 0.01337966165649962,
+              "exhaustion_tokens": 662820,
+              "exhaustion_saving_vs_uniform_full": 0.32307007259313125,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 251169,
+              "exhaustion_saving_vs_uniform_full": 0.7434841843383486,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 499377,
+              "exhaustion_saving_vs_uniform_full": 0.48999240161935376,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 508832,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 745482,
+              "exhaustion_saving_vs_uniform_full": 0.23864838697817303,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 440779,
+              "exhaustion_saving_vs_uniform_full": 0.5498378195098637,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 450234,
+              "saving_at_target": 0.11516178227784413,
+              "exhaustion_tokens": 666069,
+              "exhaustion_saving_vs_uniform_full": 0.3197519087867511,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "2130",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 753288,
+          "uniform_full_spend": 989938,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 665831,
+              "saving_at_target": 0.11610034940155689,
+              "exhaustion_tokens": 881666,
+              "exhaustion_saving_vs_uniform_full": 0.10937250615695127,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 651526,
+              "saving_at_target": 0.13509043022057965,
+              "exhaustion_tokens": 781874,
+              "exhaustion_saving_vs_uniform_full": 0.21017881927959126,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 564069,
+              "saving_at_target": 0.25119077962213654,
+              "exhaustion_tokens": 673602,
+              "exhaustion_saving_vs_uniform_full": 0.3195513254365425,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 615859,
+              "saving_at_target": 0.18243885472754118,
+              "exhaustion_tokens": 673602,
+              "exhaustion_saving_vs_uniform_full": 0.3195513254365425,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 251169,
+              "exhaustion_saving_vs_uniform_full": 0.7462780497364481,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 499377,
+              "exhaustion_saving_vs_uniform_full": 0.49554719588499485,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 743833,
+              "exhaustion_saving_vs_uniform_full": 0.24860647838551508,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 440779,
+              "exhaustion_saving_vs_uniform_full": 0.554740801949213,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 656376,
+              "exhaustion_saving_vs_uniform_full": 0.3369524152017601,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "2301",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 795202,
+          "uniform_full_spend": 1012148,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 723794,
+              "saving_at_target": 0.08979856690501287,
+              "exhaustion_tokens": 903876,
+              "exhaustion_saving_vs_uniform_full": 0.10697249809316423,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 787072,
+              "exhaustion_saving_vs_uniform_full": 0.2223745934389042,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 678800,
+              "exhaustion_saving_vs_uniform_full": 0.3293470915320684,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 678800,
+              "exhaustion_saving_vs_uniform_full": 0.3293470915320684,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 251169,
+              "exhaustion_saving_vs_uniform_full": 0.7518455798954303,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 516324,
+              "exhaustion_saving_vs_uniform_full": 0.48987302252239795,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 777084,
+              "exhaustion_saving_vs_uniform_full": 0.23224271549220077,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 465731,
+              "exhaustion_saving_vs_uniform_full": 0.5398587953540391,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 705676,
+              "exhaustion_saving_vs_uniform_full": 0.30279366258689444,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "2310",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 766701,
+          "uniform_full_spend": 1003351,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 679244,
+              "saving_at_target": 0.11406923950796988,
+              "exhaustion_tokens": 895079,
+              "exhaustion_saving_vs_uniform_full": 0.10791039227548482,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 790563,
+              "exhaustion_saving_vs_uniform_full": 0.21207732887095343,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 682291,
+              "exhaustion_saving_vs_uniform_full": 0.31998772114643825,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 682291,
+              "exhaustion_saving_vs_uniform_full": 0.31998772114643825,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 251169,
+              "exhaustion_saving_vs_uniform_full": 0.7496698563115002,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 516324,
+              "exhaustion_saving_vs_uniform_full": 0.48540042318191734,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 757246,
+              "exhaustion_saving_vs_uniform_full": 0.24528305647774307,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 465731,
+              "exhaustion_saving_vs_uniform_full": 0.5358244522604751,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 669789,
+              "exhaustion_saving_vs_uniform_full": 0.3324479668630419,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "3012",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 585178,
+          "uniform_full_spend": 992969,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 535504,
+              "saving_at_target": 0.08488699165040381,
+              "exhaustion_tokens": 884697,
+              "exhaustion_saving_vs_uniform_full": 0.10903865075344754,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 785845,
+              "exhaustion_saving_vs_uniform_full": 0.20859060051220124,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 677573,
+              "exhaustion_saving_vs_uniform_full": 0.3176292512656488,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 677573,
+              "exhaustion_saving_vs_uniform_full": 0.3176292512656488,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 301290,
+              "exhaustion_saving_vs_uniform_full": 0.6965766302875518,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 567060,
+              "exhaustion_saving_vs_uniform_full": 0.4289247700582798,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 585178,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 802124,
+              "exhaustion_saving_vs_uniform_full": 0.19219633241319722,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 517386,
+              "exhaustion_saving_vs_uniform_full": 0.4789505009723365,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 535504,
+              "saving_at_target": 0.08488699165040381,
+              "exhaustion_tokens": 715586,
+              "exhaustion_saving_vs_uniform_full": 0.27934708938546926,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "3021",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 788311,
+          "uniform_full_spend": 1005257,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 716903,
+              "saving_at_target": 0.0905835387302727,
+              "exhaustion_tokens": 896985,
+              "exhaustion_saving_vs_uniform_full": 0.10770579065850827,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 785845,
+              "exhaustion_saving_vs_uniform_full": 0.21826458308671315,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 677573,
+              "exhaustion_saving_vs_uniform_full": 0.3259703737452214,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 677573,
+              "exhaustion_saving_vs_uniform_full": 0.3259703737452214,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 301290,
+              "exhaustion_saving_vs_uniform_full": 0.7002855986081171,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 567060,
+              "exhaustion_saving_vs_uniform_full": 0.43590544507523943,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 770193,
+              "exhaustion_saving_vs_uniform_full": 0.23383473082007888,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 517386,
+              "exhaustion_saving_vs_uniform_full": 0.4853196744713043,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 698785,
+              "exhaustion_saving_vs_uniform_full": 0.3048693020789709,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "3102",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 615477,
+          "uniform_full_spend": 996460,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 549754,
+              "saving_at_target": 0.1067838440754082,
+              "exhaustion_tokens": 888188,
+              "exhaustion_saving_vs_uniform_full": 0.1086566445216065,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 590901,
+              "saving_at_target": 0.03993000550792314,
+              "exhaustion_tokens": 789520,
+              "exhaustion_saving_vs_uniform_full": 0.20767517010216163,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 525178,
+              "saving_at_target": 0.14671384958333133,
+              "exhaustion_tokens": 681248,
+              "exhaustion_saving_vs_uniform_full": 0.31633181462376814,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 567320,
+              "saving_at_target": 0.07824337871277076,
+              "exhaustion_tokens": 681248,
+              "exhaustion_saving_vs_uniform_full": 0.31633181462376814,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 301290,
+              "exhaustion_saving_vs_uniform_full": 0.697639644340967,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 554500,
+              "exhaustion_saving_vs_uniform_full": 0.4435300965417578,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 615477,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 805615,
+              "exhaustion_saving_vs_uniform_full": 0.1915229913895189,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 488777,
+              "exhaustion_saving_vs_uniform_full": 0.5094865825020574,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 549754,
+              "saving_at_target": 0.1067838440754082,
+              "exhaustion_tokens": 719077,
+              "exhaustion_saving_vs_uniform_full": 0.278368424221745,
+              "solves_at_uniform_tokens_to_target": 14
+            }
+          }
+        },
+        {
+          "ordering": "3120",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 771281,
+          "uniform_full_spend": 1007931,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 683824,
+              "saving_at_target": 0.11339187663121486,
+              "exhaustion_tokens": 899659,
+              "exhaustion_saving_vs_uniform_full": 0.10742005157099044,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 670643,
+              "saving_at_target": 0.1304816273187075,
+              "exhaustion_tokens": 800991,
+              "exhaustion_saving_vs_uniform_full": 0.20531167312048149,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 583186,
+              "saving_at_target": 0.24387350394992224,
+              "exhaustion_tokens": 692719,
+              "exhaustion_saving_vs_uniform_full": 0.3127317246914719,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 634976,
+              "saving_at_target": 0.1767254735952266,
+              "exhaustion_tokens": 692719,
+              "exhaustion_saving_vs_uniform_full": 0.3127317246914719,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 301290,
+              "exhaustion_saving_vs_uniform_full": 0.7010807287403602,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 554500,
+              "exhaustion_saving_vs_uniform_full": 0.44986313547256707,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 761826,
+              "exhaustion_saving_vs_uniform_full": 0.24416849962943887,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 488777,
+              "exhaustion_saving_vs_uniform_full": 0.5150689878573037,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 674369,
+              "exhaustion_saving_vs_uniform_full": 0.330937335988277,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "3201",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 805697,
+          "uniform_full_spend": 1022643,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 734289,
+              "saving_at_target": 0.08862885178919622,
+              "exhaustion_tokens": 914371,
+              "exhaustion_saving_vs_uniform_full": 0.10587467962915698,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 797567,
+              "exhaustion_saving_vs_uniform_full": 0.22009244672872152,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 689295,
+              "exhaustion_saving_vs_uniform_full": 0.3259671263578785,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 689295,
+              "exhaustion_saving_vs_uniform_full": 0.3259671263578785,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 301290,
+              "exhaustion_saving_vs_uniform_full": 0.7053810567324081,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 526819,
+              "exhaustion_saving_vs_uniform_full": 0.4848456401696388,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 787579,
+              "exhaustion_saving_vs_uniform_full": 0.22985929596154275,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 476226,
+              "exhaustion_saving_vs_uniform_full": 0.5343184278384538,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 716171,
+              "exhaustion_saving_vs_uniform_full": 0.299686205254424,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "3210",
+          "primary": false,
+          "uniform_target": 14,
+          "uniform_tokens_to_target": 777196,
+          "uniform_full_spend": 1013846,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 14,
+              "deficit": 0,
+              "tokens_to_target": 689739,
+              "saving_at_target": 0.11252888589236176,
+              "exhaustion_tokens": 905574,
+              "exhaustion_saving_vs_uniform_full": 0.10679333942235802,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "trunccap_only": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 801058,
+              "exhaustion_saving_vs_uniform_full": 0.20988197418542853,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "coarse": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 692786,
+              "exhaustion_saving_vs_uniform_full": 0.31667531360778656,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "rules": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 692786,
+              "exhaustion_saving_vs_uniform_full": 0.31667531360778656,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 301290,
+              "exhaustion_saving_vs_uniform_full": 0.7028246893512426,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 526819,
+              "exhaustion_saving_vs_uniform_full": 0.48037571781118626,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 767741,
+              "exhaustion_saving_vs_uniform_full": 0.24274396703246848,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 476226,
+              "exhaustion_saving_vs_uniform_full": 0.530277773941999,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 680284,
+              "exhaustion_saving_vs_uniform_full": 0.3290065749630614,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        }
+      ],
+      "bootstrap_primary_ordering": {
+        "rules": {
+          "n_reached": 10000,
+          "n_unreached": 0,
+          "median": 0.1644337442994077,
+          "ci_low": -0.07573238157609641,
+          "ci_high": 0.33505231501508104
+        }
+      }
+    },
+    "block2": {
+      "summary": {
+        "timeout_only": {
+          "primary_saving": 0.11300659773866373,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.11098363434933622,
+          "parity_orderings": 24,
+          "median_saving_over_parity_orderings": 0.11798994217767694,
+          "min_saving_over_parity_orderings": 0.11259617173016112,
+          "median_exhaustion_saving_all24": 0.11276342580561294,
+          "deficit_histogram_all24": {
+            "0": 24
+          },
+          "mean_final_solves_all24": 15,
+          "mean_uniform_target_all24": 15
+        },
+        "trunccap_only": {
+          "primary_saving": 0.23343690598774391,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.2292580852464704,
+          "parity_orderings": 20,
+          "median_saving_over_parity_orderings": 0.20464767947251394,
+          "min_saving_over_parity_orderings": 0.14040551600440443,
+          "median_exhaustion_saving_all24": 0.24241166776309514,
+          "deficit_histogram_all24": {
+            "0": 20,
+            "1": 4
+          },
+          "mean_final_solves_all24": 14.833333333333334,
+          "mean_uniform_target_all24": 15
+        },
+        "coarse": {
+          "primary_saving": 0.34644350372640764,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.3402417195958066,
+          "parity_orderings": 20,
+          "median_saving_over_parity_orderings": 0.32564459371218807,
+          "min_saving_over_parity_orderings": 0.260201177669253,
+          "median_exhaustion_saving_all24": 0.35495863679706124,
+          "deficit_histogram_all24": {
+            "0": 20,
+            "1": 4
+          },
+          "mean_final_solves_all24": 14.833333333333334,
+          "mean_uniform_target_all24": 15
+        },
+        "rules": {
+          "primary_saving": 0.33874078936011776,
+          "primary_deficit": 0,
+          "primary_exhaustion_saving": 0.3402417195958066,
+          "parity_orderings": 20,
+          "median_saving_over_parity_orderings": 0.3210865641302363,
+          "min_saving_over_parity_orderings": 0.25034015703113255,
+          "median_exhaustion_saving_all24": 0.35495863679706124,
+          "deficit_histogram_all24": {
+            "0": 20,
+            "1": 4
+          },
+          "mean_final_solves_all24": 14.833333333333334,
+          "mean_uniform_target_all24": 15
+        },
+        "uniform_cap1": {
+          "primary_saving": null,
+          "primary_deficit": 7,
+          "primary_exhaustion_saving": 0.6824291025504552,
+          "parity_orderings": 0,
+          "median_saving_over_parity_orderings": null,
+          "min_saving_over_parity_orderings": null,
+          "median_exhaustion_saving_all24": 0.7217319914742599,
+          "deficit_histogram_all24": {
+            "6": 6,
+            "7": 6,
+            "8": 12
+          },
+          "mean_final_solves_all24": 7.75,
+          "mean_uniform_target_all24": 15
+        },
+        "uniform_cap2": {
+          "primary_saving": null,
+          "primary_deficit": 2,
+          "primary_exhaustion_saving": 0.4205796775757863,
+          "parity_orderings": 0,
+          "median_saving_over_parity_orderings": null,
+          "min_saving_over_parity_orderings": null,
+          "median_exhaustion_saving_all24": 0.46453491259772994,
+          "deficit_histogram_all24": {
+            "2": 8,
+            "3": 4,
+            "4": 8,
+            "5": 4
+          },
+          "mean_final_solves_all24": 11.666666666666666,
+          "mean_uniform_target_all24": 15
+        },
+        "uniform_cap3": {
+          "primary_saving": null,
+          "primary_deficit": 2,
+          "primary_exhaustion_saving": 0.2056252735165056,
+          "parity_orderings": 12,
+          "median_saving_over_parity_orderings": 0.0,
+          "min_saving_over_parity_orderings": 0.0,
+          "median_exhaustion_saving_all24": 0.22274268470844644,
+          "deficit_histogram_all24": {
+            "0": 12,
+            "2": 6,
+            "3": 6
+          },
+          "mean_final_solves_all24": 13.75,
+          "mean_uniform_target_all24": 15
+        },
+        "timeout_plus_uniform_cap2": {
+          "primary_saving": null,
+          "primary_deficit": 2,
+          "primary_exhaustion_saving": 0.4761454181303496,
+          "parity_orderings": 0,
+          "median_saving_over_parity_orderings": null,
+          "min_saving_over_parity_orderings": null,
+          "median_exhaustion_saving_all24": 0.5197400220154618,
+          "deficit_histogram_all24": {
+            "2": 8,
+            "3": 4,
+            "4": 8,
+            "5": 4
+          },
+          "mean_final_solves_all24": 11.666666666666666,
+          "mean_uniform_target_all24": 15
+        },
+        "timeout_plus_uniform_cap3": {
+          "primary_saving": null,
+          "primary_deficit": 2,
+          "primary_exhaustion_saving": 0.2802740881797501,
+          "parity_orderings": 12,
+          "median_saving_over_parity_orderings": 0.121554666614827,
+          "min_saving_over_parity_orderings": 0.11810522929051237,
+          "median_exhaustion_saving_all24": 0.31577486236328867,
+          "deficit_histogram_all24": {
+            "0": 12,
+            "2": 6,
+            "3": 6
+          },
+          "mean_final_solves_all24": 13.75,
+          "mean_uniform_target_all24": 15
+        }
+      },
+      "per_ordering": [
+        {
+          "ordering": "0123",
+          "primary": true,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 996402,
+          "uniform_full_spend": 1014564,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 883802,
+              "saving_at_target": 0.11300659773866373,
+              "exhaustion_tokens": 901964,
+              "exhaustion_saving_vs_uniform_full": 0.11098363434933622,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 763805,
+              "saving_at_target": 0.23343690598774391,
+              "exhaustion_tokens": 781967,
+              "exhaustion_saving_vs_uniform_full": 0.2292580852464704,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 651205,
+              "saving_at_target": 0.34644350372640764,
+              "exhaustion_tokens": 669367,
+              "exhaustion_saving_vs_uniform_full": 0.3402417195958066,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 658880,
+              "saving_at_target": 0.33874078936011776,
+              "exhaustion_tokens": 669367,
+              "exhaustion_saving_vs_uniform_full": 0.3402417195958066,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 7,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322196,
+              "exhaustion_saving_vs_uniform_full": 0.6824291025504552,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 587859,
+              "exhaustion_saving_vs_uniform_full": 0.4205796775757863,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 805944,
+              "exhaustion_saving_vs_uniform_full": 0.2056252735165056,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 531484,
+              "exhaustion_saving_vs_uniform_full": 0.4761454181303496,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 730208,
+              "exhaustion_saving_vs_uniform_full": 0.2802740881797501,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "0132",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 778317,
+          "uniform_full_spend": 1005044,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 685078,
+              "saving_at_target": 0.11979566166484867,
+              "exhaustion_tokens": 892444,
+              "exhaustion_saving_vs_uniform_full": 0.11203489598465344,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 669037,
+              "saving_at_target": 0.14040551600440443,
+              "exhaustion_tokens": 772447,
+              "exhaustion_saving_vs_uniform_full": 0.23142966875082083,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 575798,
+              "saving_at_target": 0.260201177669253,
+              "exhaustion_tokens": 659847,
+              "exhaustion_saving_vs_uniform_full": 0.34346456473547426,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 583473,
+              "saving_at_target": 0.25034015703113255,
+              "exhaustion_tokens": 659847,
+              "exhaustion_saving_vs_uniform_full": 0.34346456473547426,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 7,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322196,
+              "exhaustion_saving_vs_uniform_full": 0.6794210004736111,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 587859,
+              "exhaustion_saving_vs_uniform_full": 0.4150912795857694,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 778317,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 796479,
+              "exhaustion_saving_vs_uniform_full": 0.2075182778067428,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 531484,
+              "exhaustion_saving_vs_uniform_full": 0.4711833511766649,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 685078,
+              "saving_at_target": 0.11979566166484867,
+              "exhaustion_tokens": 703240,
+              "exhaustion_saving_vs_uniform_full": 0.30028934056618417,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "0213",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 1000034,
+          "uniform_full_spend": 1018196,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 887434,
+              "saving_at_target": 0.11259617173016112,
+              "exhaustion_tokens": 905596,
+              "exhaustion_saving_vs_uniform_full": 0.11058774538497496,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 779602,
+              "exhaustion_saving_vs_uniform_full": 0.2343301289732036,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 667002,
+              "exhaustion_saving_vs_uniform_full": 0.34491787435817856,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 667002,
+              "exhaustion_saving_vs_uniform_full": 0.34491787435817856,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 7,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322196,
+              "exhaustion_saving_vs_uniform_full": 0.6835619075305737,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 553925,
+              "exhaustion_saving_vs_uniform_full": 0.45597409536081457,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 809576,
+              "exhaustion_saving_vs_uniform_full": 0.2048917890072245,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 499028,
+              "exhaustion_saving_vs_uniform_full": 0.5098900408172886,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 733840,
+              "exhaustion_saving_vs_uniform_full": 0.27927432439333877,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "0231",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 771112,
+          "uniform_full_spend": 1005822,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 679351,
+              "saving_at_target": 0.11899827781178351,
+              "exhaustion_tokens": 893222,
+              "exhaustion_saving_vs_uniform_full": 0.11194823736207793,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 768483,
+              "exhaustion_saving_vs_uniform_full": 0.2359652105442116,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 655883,
+              "exhaustion_saving_vs_uniform_full": 0.34791344790628953,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 655883,
+              "exhaustion_saving_vs_uniform_full": 0.34791344790628953,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 7,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322196,
+              "exhaustion_saving_vs_uniform_full": 0.6796689672725393,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 553925,
+              "exhaustion_saving_vs_uniform_full": 0.44928128436244186,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 771112,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 771112,
+              "exhaustion_saving_vs_uniform_full": 0.23335142798626396,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 499028,
+              "exhaustion_saving_vs_uniform_full": 0.5038605240291025,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 679351,
+              "saving_at_target": 0.11899827781178351,
+              "exhaustion_tokens": 679351,
+              "exhaustion_saving_vs_uniform_full": 0.3245812877427616,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "0312",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 789457,
+          "uniform_full_spend": 998022,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 696218,
+              "saving_at_target": 0.11810522929051237,
+              "exhaustion_tokens": 885422,
+              "exhaustion_saving_vs_uniform_full": 0.11282316421882488,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 664847,
+              "saving_at_target": 0.15784266907507316,
+              "exhaustion_tokens": 750095,
+              "exhaustion_saving_vs_uniform_full": 0.248418371538904,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 571608,
+              "saving_at_target": 0.2759478983655854,
+              "exhaustion_tokens": 637495,
+              "exhaustion_saving_vs_uniform_full": 0.36124153575772877,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 565542,
+              "saving_at_target": 0.2836316607490972,
+              "exhaustion_tokens": 637495,
+              "exhaustion_saving_vs_uniform_full": 0.36124153575772877,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 7,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322196,
+              "exhaustion_saving_vs_uniform_full": 0.6771654332269228,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 545495,
+              "exhaustion_saving_vs_uniform_full": 0.4534238724196461,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 789457,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 789457,
+              "exhaustion_saving_vs_uniform_full": 0.2089783591944867,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 473095,
+              "exhaustion_saving_vs_uniform_full": 0.525967363444894,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 696218,
+              "saving_at_target": 0.11810522929051237,
+              "exhaustion_tokens": 696218,
+              "exhaustion_saving_vs_uniform_full": 0.30240215145557914,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "0321",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 758630,
+          "uniform_full_spend": 993340,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 666869,
+              "saving_at_target": 0.12095619735575969,
+              "exhaustion_tokens": 880740,
+              "exhaustion_saving_vs_uniform_full": 0.11335494392655088,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 635313,
+              "saving_at_target": 0.16255223231351257,
+              "exhaustion_tokens": 745413,
+              "exhaustion_saving_vs_uniform_full": 0.24958926450158048,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 543552,
+              "saving_at_target": 0.28350842966927225,
+              "exhaustion_tokens": 632813,
+              "exhaustion_saving_vs_uniform_full": 0.36294420842813135,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 531264,
+              "saving_at_target": 0.29970604906212517,
+              "exhaustion_tokens": 632813,
+              "exhaustion_saving_vs_uniform_full": 0.36294420842813135,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 8,
+              "deficit": 7,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 322196,
+              "exhaustion_saving_vs_uniform_full": 0.6756437876255864,
+              "solves_at_uniform_tokens_to_target": 8
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 545495,
+              "exhaustion_saving_vs_uniform_full": 0.4508476453178166,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 758630,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 758630,
+              "exhaustion_saving_vs_uniform_full": 0.23628364910302613,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 473095,
+              "exhaustion_saving_vs_uniform_full": 0.5237330621942135,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 666869,
+              "saving_at_target": 0.12095619735575969,
+              "exhaustion_tokens": 666869,
+              "exhaustion_saving_vs_uniform_full": 0.32865987476594116,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "1023",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 981381,
+          "uniform_full_spend": 999543,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 868781,
+              "saving_at_target": 0.11473627469861347,
+              "exhaustion_tokens": 886943,
+              "exhaustion_saving_vs_uniform_full": 0.11265148172714934,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 748784,
+              "saving_at_target": 0.23700988708768567,
+              "exhaustion_tokens": 766946,
+              "exhaustion_saving_vs_uniform_full": 0.23270334542886095,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 636184,
+              "saving_at_target": 0.35174616178629914,
+              "exhaustion_tokens": 654346,
+              "exhaustion_saving_vs_uniform_full": 0.3453548271560103,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 643859,
+              "saving_at_target": 0.34392554981194867,
+              "exhaustion_tokens": 654346,
+              "exhaustion_saving_vs_uniform_full": 0.3453548271560103,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 292434,
+              "exhaustion_saving_vs_uniform_full": 0.7074322965595277,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 572838,
+              "exhaustion_saving_vs_uniform_full": 0.42690009334265755,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 790923,
+              "exhaustion_saving_vs_uniform_full": 0.20871538292999903,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 516463,
+              "exhaustion_saving_vs_uniform_full": 0.4833008684969031,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 715187,
+              "exhaustion_saving_vs_uniform_full": 0.28448601010661867,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "1032",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 763296,
+          "uniform_full_spend": 990023,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 670057,
+              "saving_at_target": 0.12215313587389431,
+              "exhaustion_tokens": 877423,
+              "exhaustion_saving_vs_uniform_full": 0.11373473141533075,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 654016,
+              "saving_at_target": 0.1431685741835409,
+              "exhaustion_tokens": 757426,
+              "exhaustion_saving_vs_uniform_full": 0.23494100642106297,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 560777,
+              "saving_at_target": 0.2653217100574351,
+              "exhaustion_tokens": 644826,
+              "exhaustion_saving_vs_uniform_full": 0.3486757378363937,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 568452,
+              "saving_at_target": 0.2552666331279084,
+              "exhaustion_tokens": 644826,
+              "exhaustion_saving_vs_uniform_full": 0.3486757378363937,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 292434,
+              "exhaustion_saving_vs_uniform_full": 0.7046189835993709,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 572838,
+              "exhaustion_saving_vs_uniform_full": 0.4213892000488878,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 763296,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 781458,
+              "exhaustion_saving_vs_uniform_full": 0.21066682289199345,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 516463,
+              "exhaustion_saving_vs_uniform_full": 0.4783323215723271,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 670057,
+              "saving_at_target": 0.12215313587389431,
+              "exhaustion_tokens": 688219,
+              "exhaustion_saving_vs_uniform_full": 0.3048454429846579,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "1203",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 995661,
+          "uniform_full_spend": 1013823,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 883061,
+              "saving_at_target": 0.11309070054968506,
+              "exhaustion_tokens": 901223,
+              "exhaustion_saving_vs_uniform_full": 0.1110647519340161,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 761276,
+              "saving_at_target": 0.23540642849323212,
+              "exhaustion_tokens": 779438,
+              "exhaustion_saving_vs_uniform_full": 0.2311892707109624,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 648676,
+              "saving_at_target": 0.3484971290429172,
+              "exhaustion_tokens": 666838,
+              "exhaustion_saving_vs_uniform_full": 0.3422540226449785,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 656351,
+              "saving_at_target": 0.3407886820915954,
+              "exhaustion_tokens": 666838,
+              "exhaustion_saving_vs_uniform_full": 0.3422540226449785,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 292434,
+              "exhaustion_saving_vs_uniform_full": 0.7115532001148129,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 531725,
+              "exhaustion_saving_vs_uniform_full": 0.475524820407507,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 805203,
+              "exhaustion_saving_vs_uniform_full": 0.20577556437366284,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 491525,
+              "exhaustion_saving_vs_uniform_full": 0.515176712305797,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 729467,
+              "exhaustion_saving_vs_uniform_full": 0.280478939617665,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "1230",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 972341,
+          "uniform_full_spend": 1003761,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 859741,
+              "saving_at_target": 0.11580299503980596,
+              "exhaustion_tokens": 891161,
+              "exhaustion_saving_vs_uniform_full": 0.11217809817277224,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 737956,
+              "saving_at_target": 0.24105226458618945,
+              "exhaustion_tokens": 769376,
+              "exhaustion_saving_vs_uniform_full": 0.23350678099667155,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 625356,
+              "saving_at_target": 0.3568552596259954,
+              "exhaustion_tokens": 656776,
+              "exhaustion_saving_vs_uniform_full": 0.3456848791694437,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 643911,
+              "saving_at_target": 0.3377724481431925,
+              "exhaustion_tokens": 656776,
+              "exhaustion_saving_vs_uniform_full": 0.3456848791694437,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 292434,
+              "exhaustion_saving_vs_uniform_full": 0.7086617232588235,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 531725,
+              "exhaustion_saving_vs_uniform_full": 0.47026732459220866,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 750088,
+              "exhaustion_saving_vs_uniform_full": 0.2527225106374924,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 491525,
+              "exhaustion_saving_vs_uniform_full": 0.5103166988954542,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 673024,
+              "exhaustion_saving_vs_uniform_full": 0.3294977589286693,
+              "solves_at_uniform_tokens_to_target": 12
+            }
+          }
+        },
+        {
+          "ordering": "1302",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 744815,
+          "uniform_full_spend": 984800,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 651576,
+              "saving_at_target": 0.12518410612031172,
+              "exhaustion_tokens": 872200,
+              "exhaustion_saving_vs_uniform_full": 0.11433793663688063,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 619710,
+              "saving_at_target": 0.16796788464249512,
+              "exhaustion_tokens": 736378,
+              "exhaustion_saving_vs_uniform_full": 0.2522562956945573,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 526471,
+              "saving_at_target": 0.29315199076280685,
+              "exhaustion_tokens": 623778,
+              "exhaustion_saving_vs_uniform_full": 0.36659423233143784,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 545026,
+              "saving_at_target": 0.2682397642367568,
+              "exhaustion_tokens": 623778,
+              "exhaustion_saving_vs_uniform_full": 0.36659423233143784,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 292434,
+              "exhaustion_saving_vs_uniform_full": 0.7030523964256702,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 515636,
+              "exhaustion_saving_vs_uniform_full": 0.4764053614947198,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 744815,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 776235,
+              "exhaustion_saving_vs_uniform_full": 0.21178411860276203,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 457933,
+              "exhaustion_saving_vs_uniform_full": 0.534998984565394,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 651576,
+              "saving_at_target": 0.12518410612031172,
+              "exhaustion_tokens": 682996,
+              "exhaustion_saving_vs_uniform_full": 0.30646222583265637,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "1320",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 967660,
+          "uniform_full_spend": 999080,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 855060,
+              "saving_at_target": 0.11636318541636526,
+              "exhaustion_tokens": 886480,
+              "exhaustion_saving_vs_uniform_full": 0.112703687392401,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 719238,
+              "saving_at_target": 0.256724469338404,
+              "exhaustion_tokens": 750658,
+              "exhaustion_saving_vs_uniform_full": 0.24865075869800213,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 606638,
+              "saving_at_target": 0.37308765475476924,
+              "exhaustion_tokens": 638058,
+              "exhaustion_saving_vs_uniform_full": 0.3613544460904031,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 625193,
+              "saving_at_target": 0.3539125312609801,
+              "exhaustion_tokens": 638058,
+              "exhaustion_saving_vs_uniform_full": 0.3613544460904031,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 9,
+              "deficit": 6,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 292434,
+              "exhaustion_saving_vs_uniform_full": 0.7072967129759379,
+              "solves_at_uniform_tokens_to_target": 9
+            },
+            "uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 515636,
+              "exhaustion_saving_vs_uniform_full": 0.48388917804380027,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 745407,
+              "exhaustion_saving_vs_uniform_full": 0.25390659406654126,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 457933,
+              "exhaustion_saving_vs_uniform_full": 0.5416453136885935,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 668343,
+              "exhaustion_saving_vs_uniform_full": 0.33104155823357484,
+              "solves_at_uniform_tokens_to_target": 12
+            }
+          }
+        },
+        {
+          "ordering": "2013",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 998163,
+          "uniform_full_spend": 1016325,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 885563,
+              "saving_at_target": 0.11280722687577083,
+              "exhaustion_tokens": 903725,
+              "exhaustion_saving_vs_uniform_full": 0.11079133151304943,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 777731,
+              "exhaustion_saving_vs_uniform_full": 0.2347615182151379,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 665131,
+              "exhaustion_saving_vs_uniform_full": 0.34555284972818734,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 665131,
+              "exhaustion_saving_vs_uniform_full": 0.34555284972818734,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 263362,
+              "exhaustion_saving_vs_uniform_full": 0.7408683246008905,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 552054,
+              "exhaustion_saving_vs_uniform_full": 0.45681351929746883,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 807705,
+              "exhaustion_saving_vs_uniform_full": 0.20526898383883108,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 497157,
+              "exhaustion_saving_vs_uniform_full": 0.510828721127592,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 731969,
+              "exhaustion_saving_vs_uniform_full": 0.2797884534966669,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "2031",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 769241,
+          "uniform_full_spend": 1003951,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 677480,
+              "saving_at_target": 0.11928771347341083,
+              "exhaustion_tokens": 891351,
+              "exhaustion_saving_vs_uniform_full": 0.11215686821368775,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 766612,
+              "exhaustion_saving_vs_uniform_full": 0.23640496398728628,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "coarse": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 654012,
+              "exhaustion_saving_vs_uniform_full": 0.3485618322009739,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "rules": {
+              "final_solves": 14,
+              "deficit": 1,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 654012,
+              "exhaustion_saving_vs_uniform_full": 0.3485618322009739,
+              "solves_at_uniform_tokens_to_target": 14
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 263362,
+              "exhaustion_saving_vs_uniform_full": 0.7376744482549447,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 552054,
+              "exhaustion_saving_vs_uniform_full": 0.4501185814845545,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 769241,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 769241,
+              "exhaustion_saving_vs_uniform_full": 0.23378631028805186,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 497157,
+              "exhaustion_saving_vs_uniform_full": 0.5047995370291977,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 677480,
+              "saving_at_target": 0.11928771347341083,
+              "exhaustion_tokens": 677480,
+              "exhaustion_saving_vs_uniform_full": 0.32518618936581567,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "2103",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 994540,
+          "uniform_full_spend": 1012702,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 881940,
+              "saving_at_target": 0.11321817121483302,
+              "exhaustion_tokens": 900102,
+              "exhaustion_saving_vs_uniform_full": 0.11118769391193062,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 760155,
+              "saving_at_target": 0.23567176785247446,
+              "exhaustion_tokens": 778317,
+              "exhaustion_saving_vs_uniform_full": 0.23144518328195263,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 647555,
+              "saving_at_target": 0.3488899390673075,
+              "exhaustion_tokens": 665717,
+              "exhaustion_saving_vs_uniform_full": 0.34263287719388325,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 655230,
+              "saving_at_target": 0.34117280350714907,
+              "exhaustion_tokens": 665717,
+              "exhaustion_saving_vs_uniform_full": 0.34263287719388325,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 263362,
+              "exhaustion_saving_vs_uniform_full": 0.7399412660387754,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 530604,
+              "exhaustion_saving_vs_uniform_full": 0.47605119768698,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 804082,
+              "exhaustion_saving_vs_uniform_full": 0.20600334550539057,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 490404,
+              "exhaustion_saving_vs_uniform_full": 0.5157469818367101,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 728346,
+              "exhaustion_saving_vs_uniform_full": 0.2807894128776284,
+              "solves_at_uniform_tokens_to_target": 13
+            }
+          }
+        },
+        {
+          "ordering": "2130",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 971220,
+          "uniform_full_spend": 1002640,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 858620,
+              "saving_at_target": 0.11593665698811806,
+              "exhaustion_tokens": 890040,
+              "exhaustion_saving_vs_uniform_full": 0.11230351871060396,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 736835,
+              "saving_at_target": 0.2413304915467145,
+              "exhaustion_tokens": 768255,
+              "exhaustion_saving_vs_uniform_full": 0.23376785286842738,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 624235,
+              "saving_at_target": 0.35726714853483243,
+              "exhaustion_tokens": 655655,
+              "exhaustion_saving_vs_uniform_full": 0.34607137157903134,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 642790,
+              "saving_at_target": 0.33816231131978336,
+              "exhaustion_tokens": 655655,
+              "exhaustion_saving_vs_uniform_full": 0.34607137157903134,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 263362,
+              "exhaustion_saving_vs_uniform_full": 0.737331444985239,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 530604,
+              "exhaustion_saving_vs_uniform_full": 0.470793106199633,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 748967,
+              "exhaustion_saving_vs_uniform_full": 0.2530050666241124,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 10,
+              "deficit": 5,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 490404,
+              "exhaustion_saving_vs_uniform_full": 0.5108872576398309,
+              "solves_at_uniform_tokens_to_target": 10
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 671903,
+              "exhaustion_saving_vs_uniform_full": 0.32986615335514247,
+              "solves_at_uniform_tokens_to_target": 12
+            }
+          }
+        },
+        {
+          "ordering": "2301",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 716237,
+          "uniform_full_spend": 982367,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 624476,
+              "saving_at_target": 0.12811541431118467,
+              "exhaustion_tokens": 869767,
+              "exhaustion_saving_vs_uniform_full": 0.11462111410501374,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 591132,
+              "saving_at_target": 0.17466983693944882,
+              "exhaustion_tokens": 732652,
+              "exhaustion_saving_vs_uniform_full": 0.254197260290706,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 499371,
+              "saving_at_target": 0.3027852512506335,
+              "exhaustion_tokens": 620052,
+              "exhaustion_saving_vs_uniform_full": 0.36881837439571974,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 517926,
+              "saving_at_target": 0.2768790218880064,
+              "exhaustion_tokens": 620052,
+              "exhaustion_saving_vs_uniform_full": 0.36881837439571974,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 263362,
+              "exhaustion_saving_vs_uniform_full": 0.7319107828337068,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 493984,
+              "exhaustion_saving_vs_uniform_full": 0.49714923241517683,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 716237,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 747657,
+              "exhaustion_saving_vs_uniform_full": 0.2389229279892342,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 437759,
+              "exhaustion_saving_vs_uniform_full": 0.554383443254914,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 624476,
+              "saving_at_target": 0.12811541431118467,
+              "exhaustion_tokens": 655896,
+              "exhaustion_saving_vs_uniform_full": 0.3323309923887916,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "2310",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 960093,
+          "uniform_full_spend": 991513,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 847493,
+              "saving_at_target": 0.11728030513710652,
+              "exhaustion_tokens": 878913,
+              "exhaustion_saving_vs_uniform_full": 0.1135638161073027,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 710378,
+              "saving_at_target": 0.26009459500277576,
+              "exhaustion_tokens": 741798,
+              "exhaustion_saving_vs_uniform_full": 0.25185247192926363,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 597778,
+              "saving_at_target": 0.3773749001398823,
+              "exhaustion_tokens": 629198,
+              "exhaustion_saving_vs_uniform_full": 0.36541628803656634,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 616333,
+              "saving_at_target": 0.35804864737061926,
+              "exhaustion_tokens": 629198,
+              "exhaustion_saving_vs_uniform_full": 0.36541628803656634,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 263362,
+              "exhaustion_saving_vs_uniform_full": 0.7343837145856887,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 493984,
+              "exhaustion_saving_vs_uniform_full": 0.5017876719720267,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 737840,
+              "exhaustion_saving_vs_uniform_full": 0.25584435100699643,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 437759,
+              "exhaustion_saving_vs_uniform_full": 0.5584939380522495,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 660776,
+              "exhaustion_saving_vs_uniform_full": 0.3335679915442359,
+              "solves_at_uniform_tokens_to_target": 12
+            }
+          }
+        },
+        {
+          "ordering": "3012",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 777757,
+          "uniform_full_spend": 986322,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 684518,
+              "saving_at_target": 0.11988191684549288,
+              "exhaustion_tokens": 873722,
+              "exhaustion_saving_vs_uniform_full": 0.11416150101082612,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 653147,
+              "saving_at_target": 0.16021713722923736,
+              "exhaustion_tokens": 738395,
+              "exhaustion_saving_vs_uniform_full": 0.2513651728340238,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 559908,
+              "saving_at_target": 0.28009905407473024,
+              "exhaustion_tokens": 625795,
+              "exhaustion_saving_vs_uniform_full": 0.3655266738448498,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 553842,
+              "saving_at_target": 0.28789840528596977,
+              "exhaustion_tokens": 625795,
+              "exhaustion_saving_vs_uniform_full": 0.3655266738448498,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 248909,
+              "exhaustion_saving_vs_uniform_full": 0.7476392091020985,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 533795,
+              "exhaustion_saving_vs_uniform_full": 0.45880250060325123,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 777757,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 777757,
+              "exhaustion_saving_vs_uniform_full": 0.2114573131289782,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 461395,
+              "exhaustion_saving_vs_uniform_full": 0.5322065207913846,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 684518,
+              "saving_at_target": 0.11988191684549288,
+              "exhaustion_tokens": 684518,
+              "exhaustion_saving_vs_uniform_full": 0.3059893219455715,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "3021",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 746930,
+          "uniform_full_spend": 981640,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 655169,
+              "saving_at_target": 0.1228508695593965,
+              "exhaustion_tokens": 869040,
+              "exhaustion_saving_vs_uniform_full": 0.11470600220039928,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 623613,
+              "saving_at_target": 0.16509846973611986,
+              "exhaustion_tokens": 733713,
+              "exhaustion_saving_vs_uniform_full": 0.25256407644350276,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 531852,
+              "saving_at_target": 0.28794933929551636,
+              "exhaustion_tokens": 621113,
+              "exhaustion_saving_vs_uniform_full": 0.36727007864390204,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 519564,
+              "saving_at_target": 0.30440068011728005,
+              "exhaustion_tokens": 621113,
+              "exhaustion_saving_vs_uniform_full": 0.36727007864390204,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 248909,
+              "exhaustion_saving_vs_uniform_full": 0.7464355568232753,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 533795,
+              "exhaustion_saving_vs_uniform_full": 0.4562212216291105,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 746930,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 746930,
+              "exhaustion_saving_vs_uniform_full": 0.23909987368077912,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 13,
+              "deficit": 2,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 461395,
+              "exhaustion_saving_vs_uniform_full": 0.5299753473778575,
+              "solves_at_uniform_tokens_to_target": 13
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 655169,
+              "saving_at_target": 0.1228508695593965,
+              "exhaustion_tokens": 655169,
+              "exhaustion_saving_vs_uniform_full": 0.33257711584695004,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "3102",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 743191,
+          "uniform_full_spend": 983176,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 649952,
+              "saving_at_target": 0.12545765489625138,
+              "exhaustion_tokens": 870576,
+              "exhaustion_saving_vs_uniform_full": 0.11452679886408945,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 618086,
+              "saving_at_target": 0.1683349233238831,
+              "exhaustion_tokens": 734754,
+              "exhaustion_saving_vs_uniform_full": 0.2526729700480891,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 524847,
+              "saving_at_target": 0.2937925782201345,
+              "exhaustion_tokens": 622154,
+              "exhaustion_saving_vs_uniform_full": 0.36719976891217854,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 543402,
+              "saving_at_target": 0.26882591419971447,
+              "exhaustion_tokens": 622154,
+              "exhaustion_saving_vs_uniform_full": 0.36719976891217854,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 248909,
+              "exhaustion_saving_vs_uniform_full": 0.7468316964612642,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 514012,
+              "exhaustion_saving_vs_uniform_full": 0.4771922829686648,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 743191,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 774611,
+              "exhaustion_saving_vs_uniform_full": 0.21213394143062891,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 456309,
+              "exhaustion_saving_vs_uniform_full": 0.5358826903830036,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 649952,
+              "saving_at_target": 0.12545765489625138,
+              "exhaustion_tokens": 681372,
+              "exhaustion_saving_vs_uniform_full": 0.3069684369838157,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "3120",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 966036,
+          "uniform_full_spend": 997456,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 853436,
+              "saving_at_target": 0.1165588031915995,
+              "exhaustion_tokens": 884856,
+              "exhaustion_saving_vs_uniform_full": 0.11288718499863648,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 717614,
+              "saving_at_target": 0.25715604801477376,
+              "exhaustion_tokens": 749034,
+              "exhaustion_saving_vs_uniform_full": 0.24905559743988703,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 605014,
+              "saving_at_target": 0.37371485120637327,
+              "exhaustion_tokens": 636434,
+              "exhaustion_saving_vs_uniform_full": 0.3619427824385236,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 623569,
+              "saving_at_target": 0.3545074924744005,
+              "exhaustion_tokens": 636434,
+              "exhaustion_saving_vs_uniform_full": 0.3619427824385236,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 248909,
+              "exhaustion_saving_vs_uniform_full": 0.7504561604722414,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 514012,
+              "exhaustion_saving_vs_uniform_full": 0.4846770183346434,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 743783,
+              "exhaustion_saving_vs_uniform_full": 0.2543199900546992,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 11,
+              "deficit": 4,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 456309,
+              "exhaustion_saving_vs_uniform_full": 0.5425271891692466,
+              "solves_at_uniform_tokens_to_target": 11
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 666719,
+              "exhaustion_saving_vs_uniform_full": 0.3315805408960395,
+              "solves_at_uniform_tokens_to_target": 12
+            }
+          }
+        },
+        {
+          "ordering": "3201",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 711396,
+          "uniform_full_spend": 977526,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 619635,
+              "saving_at_target": 0.12898723074068452,
+              "exhaustion_tokens": 864926,
+              "exhaustion_saving_vs_uniform_full": 0.11518875201273415,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 586291,
+              "saving_at_target": 0.17585845295728397,
+              "exhaustion_tokens": 727811,
+              "exhaustion_saving_vs_uniform_full": 0.2554561208602124,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 494530,
+              "saving_at_target": 0.3048456836979685,
+              "exhaustion_tokens": 615211,
+              "exhaustion_saving_vs_uniform_full": 0.37064487287294656,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 513085,
+              "saving_at_target": 0.2787631642573194,
+              "exhaustion_tokens": 615211,
+              "exhaustion_saving_vs_uniform_full": 0.37064487287294656,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 248909,
+              "exhaustion_saving_vs_uniform_full": 0.7453684096382092,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 489143,
+              "exhaustion_saving_vs_uniform_full": 0.49961126353672436,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 711396,
+              "saving_at_target": 0.0,
+              "exhaustion_tokens": 742816,
+              "exhaustion_saving_vs_uniform_full": 0.2401061455142881,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 432918,
+              "exhaustion_saving_vs_uniform_full": 0.5571289152411292,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 619635,
+              "saving_at_target": 0.12898723074068452,
+              "exhaustion_tokens": 651055,
+              "exhaustion_saving_vs_uniform_full": 0.3339767944791239,
+              "solves_at_uniform_tokens_to_target": 15
+            }
+          }
+        },
+        {
+          "ordering": "3210",
+          "primary": false,
+          "uniform_target": 15,
+          "uniform_tokens_to_target": 955252,
+          "uniform_full_spend": 986672,
+          "variants": {
+            "timeout_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 842652,
+              "saving_at_target": 0.11787465506484152,
+              "exhaustion_tokens": 874072,
+              "exhaustion_saving_vs_uniform_full": 0.1141210047513257,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "trunccap_only": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 705537,
+              "saving_at_target": 0.2614126952887824,
+              "exhaustion_tokens": 736957,
+              "exhaustion_saving_vs_uniform_full": 0.25308815898292447,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "coarse": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 592937,
+              "saving_at_target": 0.37928735035362393,
+              "exhaustion_tokens": 624357,
+              "exhaustion_saving_vs_uniform_full": 0.36720916373425005,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "rules": {
+              "final_solves": 15,
+              "deficit": 0,
+              "tokens_to_target": 611492,
+              "saving_at_target": 0.3598631565283297,
+              "exhaustion_tokens": 624357,
+              "exhaustion_saving_vs_uniform_full": 0.36720916373425005,
+              "solves_at_uniform_tokens_to_target": 15
+            },
+            "uniform_cap1": {
+              "final_solves": 7,
+              "deficit": 8,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 248909,
+              "exhaustion_saving_vs_uniform_full": 0.7477287284933595,
+              "solves_at_uniform_tokens_to_target": 7
+            },
+            "uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 489143,
+              "exhaustion_saving_vs_uniform_full": 0.5042496391911395,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 732999,
+              "exhaustion_saving_vs_uniform_full": 0.2570996237858174,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap2": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 432918,
+              "exhaustion_saving_vs_uniform_full": 0.5612341284641704,
+              "solves_at_uniform_tokens_to_target": 12
+            },
+            "timeout_plus_uniform_cap3": {
+              "final_solves": 12,
+              "deficit": 3,
+              "tokens_to_target": null,
+              "saving_at_target": null,
+              "exhaustion_tokens": 655935,
+              "exhaustion_saving_vs_uniform_full": 0.3352046070021243,
+              "solves_at_uniform_tokens_to_target": 12
+            }
+          }
+        }
+      ],
+      "bootstrap_primary_ordering": {
+        "rules": {
+          "n_reached": 10000,
+          "n_unreached": 0,
+          "median": 0.2948565690785291,
+          "ci_low": 0.07316391179697734,
+          "ci_high": 0.4248314386998897
+        }
+      }
+    }
+  }
+}

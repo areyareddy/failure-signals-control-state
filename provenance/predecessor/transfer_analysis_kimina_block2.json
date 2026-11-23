@@ -1,0 +1,101 @@
+{
+  "name": "kimina_block2",
+  "labels": [
+    "K0",
+    "K1",
+    "K2",
+    "K3"
+  ],
+  "n_theorems": 29,
+  "classes": {
+    "unsolved_goals": 4,
+    "unknown_identifier": 2,
+    "truncated": 9,
+    "other": 5,
+    "linarith_failed": 8,
+    "type_mismatch": 1
+  },
+  "rescues_per_draw": [
+    3,
+    2,
+    2,
+    1
+  ],
+  "primary": {
+    "uniform_solves": 4,
+    "uniform_full_spend": 504736,
+    "Tu": 246110,
+    "T_rules": 137219,
+    "savings": 0.4424484986388201,
+    "rules_final_solves": 4,
+    "oracle_tokens": 12978
+  },
+  "orderings_summary": {
+    "uniform": {
+      "s100": 3.75,
+      "s75": 3.2083333333333335,
+      "s50": 2.5833333333333335,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    },
+    "random": {
+      "s100": 3.966666666666667,
+      "s75": 3.158333333333333,
+      "s50": 2.45,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    },
+    "rules": {
+      "s100": 4,
+      "s75": 3.9166666666666665,
+      "s50": 2.8333333333333335,
+      "reach_frac": 1.0,
+      "savings_median": 0.283045819401846,
+      "savings_all": [
+        0.4424484986388201,
+        0.4424484986388201,
+        0.4297122943848659,
+        0.4297122943848659,
+        0.29260526195575354,
+        0.28217436076256275,
+        0.3010846732314516,
+        0.3010846732314516,
+        0.20070639739929153,
+        0.2840286540813901,
+        0.1980307862987103,
+        0.2734679206853172,
+        0.3075168390114733,
+        0.3075168390114733,
+        0.20060040686149538,
+        0.2839172780411292,
+        0.20079315274309506,
+        0.2634840424504429,
+        0.28559176672384223,
+        0.2753198287158741,
+        0.19705410350502395,
+        0.272451786921005,
+        0.19976684541851253,
+        0.2624836671740507
+      ]
+    },
+    "oracle": {
+      "s100": 4,
+      "s75": 4,
+      "s50": 4,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    }
+  },
+  "frozen_class_order": [
+    "unknown_identifier",
+    "unsolved_goals",
+    "linarith_failed",
+    "other",
+    "simp_failed",
+    "truncated",
+    "timeout"
+  ]
+}

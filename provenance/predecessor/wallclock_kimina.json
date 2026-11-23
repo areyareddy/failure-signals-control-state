@@ -1,0 +1,24 @@
+{
+  "name": "kimina",
+  "target_solves": 5,
+  "policies": {
+    "uniform": {
+      "solves": 5,
+      "calls": 75,
+      "completion_tokens": 396041,
+      "prompt_tokens": 17903,
+      "generation_s": 2984.8,
+      "verification_s": 45.6,
+      "total_s": 3030.4
+    },
+    "rules": {
+      "solves": 5,
+      "calls": 57,
+      "completion_tokens": 290488,
+      "prompt_tokens": 13380,
+      "generation_s": 2182.4,
+      "verification_s": 29.9,
+      "total_s": 2212.3
+    }
+  }
+}

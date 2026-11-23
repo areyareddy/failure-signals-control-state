@@ -1,0 +1,24 @@
+{
+  "name": "block1",
+  "target_solves": 14,
+  "policies": {
+    "uniform": {
+      "solves": 14,
+      "calls": 93,
+      "completion_tokens": 734095,
+      "prompt_tokens": 18372,
+      "generation_s": 9319.0,
+      "verification_s": 2036.3,
+      "total_s": 11355.3
+    },
+    "rules": {
+      "solves": 14,
+      "calls": 69,
+      "completion_tokens": 532270,
+      "prompt_tokens": 13125,
+      "generation_s": 6712.2,
+      "verification_s": 1014.9,
+      "total_s": 7727.1
+    }
+  }
+}

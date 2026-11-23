@@ -1,0 +1,15 @@
+{
+  "goedel_block1": {
+    "median_savings": 0.169,
+    "ci_low": -0.063,
+    "ci_high": 0.330,
+    "resamples": 10000
+  },
+  "goedel_block2": {
+    "median_savings": 0.297,
+    "ci_low": 0.071,
+    "ci_high": 0.425,
+    "resamples": 10000
+  },
+  "source": "Accepted non-archival predecessor manuscript, theorem-cluster bootstrap reported in Table 8 and Section 6.2."
+}

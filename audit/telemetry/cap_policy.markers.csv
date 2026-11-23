@@ -1,0 +1,82 @@
+iso,label,note
+2026-08-30T02:19:26.246003+00:00,idle_start,60s baseline before generation
+2026-08-30T02:20:37.227477+00:00,idle_end,end of pre-run baseline
+2026-08-30T02:20:37.415127+00:00,cap_eval_b1_long_c1_start,cap=12288
+2026-08-30T02:27:08.608807+00:00,cap_eval_b1_long_c1_end,cap=12288 seconds=391.1
+2026-08-30T02:27:08.653359+00:00,cap_eval_b1_short_c1_start,cap=8192
+2026-08-30T02:31:39.690410+00:00,cap_eval_b1_short_c1_end,cap=8192 seconds=271.0
+2026-08-30T02:46:13.279022+00:00,generation_start,"full run, 155 remaining, budget raised to 3.5 GPU-h"
+2026-08-30T02:46:13.394513+00:00,cap_eval_b1_long_main_start,cap=12288
+2026-08-30T03:12:19.790263+00:00,cap_eval_b1_long_main_end,cap=12288 seconds=1566.3
+2026-08-30T03:12:19.831657+00:00,cap_eval_b1_long_c1_start,cap=12288
+2026-08-30T03:12:20.068925+00:00,cap_eval_b1_long_c1_end,cap=12288 seconds=0.2
+2026-08-30T03:12:20.116192+00:00,cap_eval_b1_short_c1_start,cap=8192
+2026-08-30T03:12:20.288443+00:00,cap_eval_b1_short_c1_end,cap=8192 seconds=0.1
+2026-08-30T03:12:20.352487+00:00,cap_eval_b1_short_c2_start,cap=8192
+2026-08-30T03:17:49.533857+00:00,cap_eval_b1_short_c2_end,cap=8192 seconds=329.1
+2026-08-30T03:17:49.581373+00:00,cap_eval_b1_long_c2_start,cap=12288
+2026-08-30T03:25:32.363847+00:00,cap_eval_b1_long_c2_end,cap=12288 seconds=462.7
+2026-08-30T03:25:32.411153+00:00,cap_eval_b1_long_c3_start,cap=12288
+2026-08-30T03:29:53.417489+00:00,cap_eval_b1_long_c3_end,cap=12288 seconds=260.9
+2026-08-30T03:29:53.473377+00:00,cap_eval_b1_short_c3_start,cap=8192
+2026-08-30T03:33:40.571457+00:00,cap_eval_b1_short_c3_end,cap=8192 seconds=227.1
+2026-08-30T03:33:40.615635+00:00,cap_eval_b2_long_main_start,cap=12288
+2026-08-30T03:33:40.806606+00:00,cap_eval_b2_long_main_end,cap=12288 seconds=0.1
+2026-08-30T03:33:40.854332+00:00,cap_eval_b2_short_c1_start,cap=8192
+2026-08-30T03:33:41.028858+00:00,cap_eval_b2_short_c1_end,cap=8192 seconds=0.1
+2026-08-30T03:33:41.076690+00:00,cap_eval_b2_long_c1_start,cap=12288
+2026-08-30T03:33:41.266360+00:00,cap_eval_b2_long_c1_end,cap=12288 seconds=0.1
+2026-08-30T03:33:41.314214+00:00,cap_eval_b2_long_c2_start,cap=12288
+2026-08-30T03:33:41.504978+00:00,cap_eval_b2_long_c2_end,cap=12288 seconds=0.1
+2026-08-30T03:33:41.554641+00:00,cap_eval_b2_short_c2_start,cap=8192
+2026-08-30T03:33:41.740930+00:00,cap_eval_b2_short_c2_end,cap=8192 seconds=0.1
+2026-08-30T03:33:41.788475+00:00,cap_eval_b2_short_c3_start,cap=8192
+2026-08-30T03:33:41.977839+00:00,cap_eval_b2_short_c3_end,cap=8192 seconds=0.1
+2026-08-30T03:33:42.025369+00:00,cap_eval_b2_long_c3_start,cap=12288
+2026-08-30T03:33:42.215371+00:00,cap_eval_b2_long_c3_end,cap=12288 seconds=0.1
+2026-08-30T03:33:42.262631+00:00,cap_eval_b3_long_main_start,cap=12288
+2026-08-30T03:33:42.469908+00:00,cap_eval_b3_long_main_end,cap=12288 seconds=0.2
+2026-08-30T03:33:42.524419+00:00,cap_eval_b3_long_c1_start,cap=12288
+2026-08-30T03:33:42.703596+00:00,cap_eval_b3_long_c1_end,cap=12288 seconds=0.1
+2026-08-30T03:33:42.750586+00:00,cap_eval_b3_short_c1_start,cap=8192
+2026-08-30T03:33:42.934255+00:00,cap_eval_b3_short_c1_end,cap=8192 seconds=0.1
+2026-08-30T03:33:42.982279+00:00,cap_eval_b3_short_c2_start,cap=8192
+2026-08-30T03:33:43.170779+00:00,cap_eval_b3_short_c2_end,cap=8192 seconds=0.1
+2026-08-30T03:33:43.233840+00:00,cap_eval_b3_long_c2_start,cap=12288
+2026-08-30T03:33:43.422782+00:00,cap_eval_b3_long_c2_end,cap=12288 seconds=0.1
+2026-08-30T03:33:43.470095+00:00,cap_eval_b3_long_c3_start,cap=12288
+2026-08-30T03:33:43.675389+00:00,cap_eval_b3_long_c3_end,cap=12288 seconds=0.1
+2026-08-30T03:33:43.722496+00:00,cap_eval_b3_short_c3_start,cap=8192
+2026-08-30T03:33:43.911582+00:00,cap_eval_b3_short_c3_end,cap=8192 seconds=0.1
+2026-08-30T03:37:30.195473+00:00,driver_exit_seed_block_bug,"s57 exited rc=0 at 03:33:43Z after no-op'ing all 14 block-2/3 cohorts: s12_run.py --block defaults to 1 and s57 never passed it, so runner.claim() filtered seed_block=1 and found 0 pending rows. Block 1 (55 branches) is complete and unaffected. GPU idle 03:33:43Z-resume."
+2026-08-30T03:37:30.252049+00:00,resume_b2b3_start,s57 patched to pass --block from the frozen plan; resuming from step 7
+2026-08-30T03:37:34.510563+00:00,cap_eval_b2_long_main_start,cap=12288
+2026-08-30T04:01:08.592177+00:00,cap_eval_b2_long_main_end,cap=12288 seconds=1414.0
+2026-08-30T04:01:08.643276+00:00,cap_eval_b2_short_c1_start,cap=8192
+2026-08-30T04:06:11.717781+00:00,cap_eval_b2_short_c1_end,cap=8192 seconds=303.0
+2026-08-30T04:06:11.771947+00:00,cap_eval_b2_long_c1_start,cap=12288
+2026-08-30T04:14:25.063462+00:00,cap_eval_b2_long_c1_end,cap=12288 seconds=493.2
+2026-08-30T04:14:25.112201+00:00,cap_eval_b2_long_c2_start,cap=12288
+2026-08-30T04:22:37.296362+00:00,cap_eval_b2_long_c2_end,cap=12288 seconds=492.1
+2026-08-30T04:22:37.344291+00:00,cap_eval_b2_short_c2_start,cap=8192
+2026-08-30T04:27:47.123248+00:00,cap_eval_b2_short_c2_end,cap=8192 seconds=309.7
+2026-08-30T04:27:47.170079+00:00,cap_eval_b2_short_c3_start,cap=8192
+2026-08-30T04:30:34.272547+00:00,cap_eval_b2_short_c3_end,cap=8192 seconds=167.0
+2026-08-30T04:30:34.324614+00:00,cap_eval_b2_long_c3_start,cap=12288
+2026-08-30T04:33:56.180319+00:00,cap_eval_b2_long_c3_end,cap=12288 seconds=201.8
+2026-08-30T04:33:56.228207+00:00,cap_eval_b3_long_main_start,cap=12288
+2026-08-30T04:57:58.461958+00:00,cap_eval_b3_long_main_end,cap=12288 seconds=1442.2
+2026-08-30T04:57:58.514280+00:00,cap_eval_b3_long_c1_start,cap=12288
+2026-08-30T05:06:50.738046+00:00,cap_eval_b3_long_c1_end,cap=12288 seconds=532.2
+2026-08-30T05:06:50.781121+00:00,cap_eval_b3_short_c1_start,cap=8192
+2026-08-30T05:12:16.697136+00:00,cap_eval_b3_short_c1_end,cap=8192 seconds=325.9
+2026-08-30T05:12:16.747429+00:00,cap_eval_b3_short_c2_start,cap=8192
+2026-08-30T05:17:42.462003+00:00,cap_eval_b3_short_c2_end,cap=8192 seconds=325.6
+2026-08-30T05:17:42.513025+00:00,cap_eval_b3_long_c2_start,cap=12288
+2026-08-30T05:25:24.700693+00:00,cap_eval_b3_long_c2_end,cap=12288 seconds=462.1
+2026-08-30T05:25:24.748106+00:00,cap_eval_b3_long_c3_start,cap=12288
+2026-08-30T05:28:31.123869+00:00,cap_eval_b3_long_c3_end,cap=12288 seconds=186.3
+2026-08-30T05:28:31.176363+00:00,cap_eval_b3_short_c3_start,cap=8192
+2026-08-30T05:31:34.614356+00:00,cap_eval_b3_short_c3_end,cap=8192 seconds=183.4
+2026-08-30T05:32:06.031843+00:00,idle_start_post,
+2026-08-30T05:33:06.125828+00:00,idle_end_post,

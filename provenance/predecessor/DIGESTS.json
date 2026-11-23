@@ -1,0 +1,74 @@
+[
+  {
+    "file": "ablation_goedel_block1.json",
+    "sha256": "7e3574353c2520be6d1e1d35826710492504779df25d99696a3895d222734b81"
+  },
+  {
+    "file": "ablation_goedel_block2.json",
+    "sha256": "b1aa2d212df6166f20dbb9e3facaa5de8377bd53e246d2cd8122399266453a98"
+  },
+  {
+    "file": "dev_retryability.json",
+    "sha256": "fa71d8ca5177d28091b3da3234b1384877ba95cb17df550ecab16a97345a26ca"
+  },
+  {
+    "file": "end_to_end_accounting.json",
+    "sha256": "5049680fdc5ab83c760dbe48409afd9a2d499b458d82a71c7c2746d41c45b9b3"
+  },
+  {
+    "file": "failure_class_retryability.json",
+    "sha256": "1da140ad5fe918f4c82a04f0e740cd1a871d4acf26386d4e07d425080726a944"
+  },
+  {
+    "file": "minif2f_split.json",
+    "sha256": "402284f5e6961fb931986539ff1ffb53316d00aabf7ac81cdb6cc4d07abea474"
+  },
+  {
+    "file": "scheduler_bootstrap.json",
+    "sha256": "3e1db0c36595a95024562e8a33e3798cafc1997d9fd3163b6126d9fee7bde58a"
+  },
+  {
+    "file": "scheduler_budget_slices.json",
+    "sha256": "12e417908fb0ee91c745224d8b9d33376955b1c200131027e537d5262f496402"
+  },
+  {
+    "file": "transfer_analysis_deepseek.json",
+    "sha256": "60e44ee8873c539eb18fd488f7b26241c72a7da9d4f158570c2b1ef1e0470bdb"
+  },
+  {
+    "file": "transfer_analysis_goedel_block2.json",
+    "sha256": "c5e316d2873adbd3767558e49e6e2e0f27a2977b1e926ab47af7be2705c44975"
+  },
+  {
+    "file": "transfer_analysis_kimina.json",
+    "sha256": "a2bb15600f714fc609ba37c6fd672a3f5ee375a0a446a9de76f762464a9586ad"
+  },
+  {
+    "file": "transfer_analysis_kimina_block2.json",
+    "sha256": "53825ebbb87c63f551d9ea72bb3dbd7c5def5b35f4144a714c8a16bb3df13d86"
+  },
+  {
+    "file": "transfer_analysis_validation_block1.json",
+    "sha256": "ad48156cda3bb32e62abbb7fdab9acba10c82cc05d6eb04a1f72708ba7462850"
+  },
+  {
+    "file": "wallclock_block1.json",
+    "sha256": "af2fdc510b91d8e81a695b8ade36d53a4822102c0926f212f9b644e4b48f4129"
+  },
+  {
+    "file": "wallclock_deepseek.json",
+    "sha256": "5a9ff110bbb3e07eaf0fa3e711a1b2ba818bce5699ae227eee9e5e1f5423d812"
+  },
+  {
+    "file": "wallclock_goedel_block2.json",
+    "sha256": "e8cf1c0b115a98e6b29ab111da0b7c13e8aef6eab2934df3d5aae0916902d6ee"
+  },
+  {
+    "file": "wallclock_kimina.json",
+    "sha256": "4bcffc52bb881172732c3e132294148ef86f2604e5ac10ed49490490019d3ea0"
+  },
+  {
+    "file": "wallclock_kimina_block2.json",
+    "sha256": "0026a8d8483712e6be78d93c882202959b0a031349e602342c672864631f38d5"
+  }
+]

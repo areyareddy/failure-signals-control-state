@@ -1,0 +1,24 @@
+{
+  "name": "kimina_block2",
+  "target_solves": 4,
+  "policies": {
+    "uniform": {
+      "solves": 4,
+      "calls": 49,
+      "completion_tokens": 246110,
+      "prompt_tokens": 11822,
+      "generation_s": 1835.7,
+      "verification_s": 219.2,
+      "total_s": 2054.9
+    },
+    "rules": {
+      "solves": 4,
+      "calls": 30,
+      "completion_tokens": 137219,
+      "prompt_tokens": 6988,
+      "generation_s": 1020.3,
+      "verification_s": 207.7,
+      "total_s": 1228.0
+    }
+  }
+}

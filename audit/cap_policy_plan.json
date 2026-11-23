@@ -1,0 +1,204 @@
+{
+  "bases": [
+    4000000,
+    5000000,
+    6000000
+  ],
+  "chunk_size": 5,
+  "execution_order": [
+    {
+      "block": 1,
+      "cap": 12288,
+      "cohort": "cap_eval_b1_long_main",
+      "n_roots": 25,
+      "policy": "long"
+    },
+    {
+      "block": 1,
+      "cap": 12288,
+      "cohort": "cap_eval_b1_long_c1",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 1,
+      "cap": 8192,
+      "cohort": "cap_eval_b1_short_c1",
+      "n_roots": 5,
+      "policy": "short"
+    },
+    {
+      "block": 1,
+      "cap": 8192,
+      "cohort": "cap_eval_b1_short_c2",
+      "n_roots": 5,
+      "policy": "short"
+    },
+    {
+      "block": 1,
+      "cap": 12288,
+      "cohort": "cap_eval_b1_long_c2",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 1,
+      "cap": 12288,
+      "cohort": "cap_eval_b1_long_c3",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 1,
+      "cap": 8192,
+      "cohort": "cap_eval_b1_short_c3",
+      "n_roots": 5,
+      "policy": "short"
+    },
+    {
+      "block": 2,
+      "cap": 12288,
+      "cohort": "cap_eval_b2_long_main",
+      "n_roots": 25,
+      "policy": "long"
+    },
+    {
+      "block": 2,
+      "cap": 8192,
+      "cohort": "cap_eval_b2_short_c1",
+      "n_roots": 5,
+      "policy": "short"
+    },
+    {
+      "block": 2,
+      "cap": 12288,
+      "cohort": "cap_eval_b2_long_c1",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 2,
+      "cap": 12288,
+      "cohort": "cap_eval_b2_long_c2",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 2,
+      "cap": 8192,
+      "cohort": "cap_eval_b2_short_c2",
+      "n_roots": 5,
+      "policy": "short"
+    },
+    {
+      "block": 2,
+      "cap": 8192,
+      "cohort": "cap_eval_b2_short_c3",
+      "n_roots": 5,
+      "policy": "short"
+    },
+    {
+      "block": 2,
+      "cap": 12288,
+      "cohort": "cap_eval_b2_long_c3",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 3,
+      "cap": 12288,
+      "cohort": "cap_eval_b3_long_main",
+      "n_roots": 25,
+      "policy": "long"
+    },
+    {
+      "block": 3,
+      "cap": 12288,
+      "cohort": "cap_eval_b3_long_c1",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 3,
+      "cap": 8192,
+      "cohort": "cap_eval_b3_short_c1",
+      "n_roots": 5,
+      "policy": "short"
+    },
+    {
+      "block": 3,
+      "cap": 8192,
+      "cohort": "cap_eval_b3_short_c2",
+      "n_roots": 5,
+      "policy": "short"
+    },
+    {
+      "block": 3,
+      "cap": 12288,
+      "cohort": "cap_eval_b3_long_c2",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 3,
+      "cap": 12288,
+      "cohort": "cap_eval_b3_long_c3",
+      "n_roots": 5,
+      "policy": "long"
+    },
+    {
+      "block": 3,
+      "cap": 8192,
+      "cohort": "cap_eval_b3_short_c3",
+      "n_roots": 5,
+      "policy": "short"
+    }
+  ],
+  "long_cap": 12288,
+  "short_cap": 8192,
+  "spec": "spec/CAP_POLICY_SPEC.md",
+  "truncated_roots": [
+    "aime_1995_p7",
+    "aime_1997_p9",
+    "algebra_sum1onsqrt2to1onsqrt10000lt198",
+    "amc12a_2008_p25",
+    "amc12b_2020_p21",
+    "imo_1969_p2",
+    "imo_1981_p6",
+    "imo_1985_p6",
+    "imo_1997_p5",
+    "imo_2001_p6",
+    "induction_pord1p1on2powklt5on2",
+    "mathd_numbertheory_234",
+    "mathd_numbertheory_277",
+    "mathd_numbertheory_427",
+    "numbertheory_x5neqy2p4"
+  ],
+  "unaffected_roots": [
+    "aime_1984_p1",
+    "aime_1987_p5",
+    "algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feqn10_zeq7",
+    "algebra_cubrtrp1oncubrtreq3_rcubp1onrcubeq5778",
+    "algebra_others_exirrpowirrrat",
+    "amc12_2001_p21",
+    "amc12a_2003_p5",
+    "amc12a_2019_p12",
+    "amc12a_2020_p4",
+    "amc12b_2002_p4",
+    "amc12b_2020_p6",
+    "imo_1965_p2",
+    "imo_1974_p3",
+    "imo_2019_p1",
+    "induction_pprime_pdvdapowpma",
+    "mathd_algebra_188",
+    "mathd_algebra_313",
+    "mathd_numbertheory_135",
+    "mathd_numbertheory_235",
+    "mathd_numbertheory_296",
+    "mathd_numbertheory_343",
+    "mathd_numbertheory_495",
+    "numbertheory_3pow2pownm1mod2pownp3eq2pownp2",
+    "numbertheory_fxeq4powxp6powxp9powx_f2powmdvdf2pown",
+    "numbertheory_notequiv2i2jasqbsqdiv8"
+  ]
+}

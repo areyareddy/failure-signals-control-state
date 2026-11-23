@@ -1,0 +1,124 @@
+{
+  "blocks": {
+    "block1": {
+      "calls_avoided": 24,
+      "draw_sources": [
+        {
+          "path": "runs/epp_prospective40_seed56/evaluation/cascade_attempts.jsonl",
+          "r0_rows": 40,
+          "rows": 40,
+          "sha256": "9696529c84ea900a0005530c2b7a3297dc26a76c7db19bcef314a9a6f67fe3fd"
+        },
+        {
+          "path": "runs/epp_prospective40_seed57/evaluation/cascade_attempts.jsonl",
+          "r0_rows": 40,
+          "rows": 40,
+          "sha256": "e8827ee6a6e4cb160e11d99f48ab8536e03d25424a63442bc4208f082cea0a15"
+        },
+        {
+          "path": "runs/epp_prospective40_seed58/evaluation/cascade_attempts.jsonl",
+          "r0_rows": 40,
+          "rows": 40,
+          "sha256": "c6bb695a88c07f3ff035a283f5b0e7f6ce036192ddd9927fc759813a9968ae75"
+        },
+        {
+          "path": "runs/epp_prospective40_seed59/evaluation/cascade_attempts.jsonl",
+          "r0_rows": 40,
+          "rows": 40,
+          "sha256": "d7beadc1c9606b8fe90946dff6684fcf8f17cfa338deee6b701db6f130e41d2a"
+        }
+      ],
+      "pipeline_completion_token_savings_fraction": 0.11742053569246846,
+      "report_source": {
+        "path": "provenance/colm/transfer_analysis_validation_block1.json",
+        "sha256": "ad48156cda3bb32e62abbb7fdab9acba10c82cc05d6eb04a1f72708ba7462850"
+      },
+      "retry_completion_token_savings_fraction": 0.2749303564252583,
+      "rules": {
+        "pipeline_calls": 271,
+        "pipeline_calls_per_verified": 2.037593984962406,
+        "pipeline_completion_tokens": 1516997,
+        "pipeline_completion_tokens_per_verified": 11405.992481203008,
+        "retry_calls_to_target": 69,
+        "retry_completion_tokens_to_target": 532270
+      },
+      "target_retry_solves": 14,
+      "total_verified_of_202": 133,
+      "uniform": {
+        "pipeline_calls": 295,
+        "pipeline_calls_per_verified": 2.218045112781955,
+        "pipeline_completion_tokens": 1718822,
+        "pipeline_completion_tokens_per_verified": 12923.473684210527,
+        "retry_calls_to_target": 93,
+        "retry_completion_tokens_to_target": 734095
+      }
+    },
+    "block2": {
+      "calls_avoided": 33,
+      "draw_sources": [
+        {
+          "path": "runs/epp_replication40_d0/evaluation/cascade_attempts.jsonl",
+          "r0_rows": 40,
+          "rows": 40,
+          "sha256": "37425eb84ef2fdd41bbcc51dc679912c43217fa16255de7bc57962bb81e8c5cb"
+        },
+        {
+          "path": "runs/epp_replication40_d1/evaluation/cascade_attempts.jsonl",
+          "r0_rows": 40,
+          "rows": 40,
+          "sha256": "73a8db047e11c95f8ebb65ab61109bc33e545edf609794447608ead1def70476"
+        },
+        {
+          "path": "runs/epp_replication40_d2/evaluation/cascade_attempts.jsonl",
+          "r0_rows": 40,
+          "rows": 40,
+          "sha256": "85de5bac497d3856a1dc82285da1951f19c169fea93e813885a7aaa2673bb5c1"
+        },
+        {
+          "path": "runs/epp_replication40_d3/evaluation/cascade_attempts.jsonl",
+          "r0_rows": 40,
+          "rows": 40,
+          "sha256": "960fb5dde9c3b6b8b996e0cfd8032c28c9f9addc5b3367b8a47b80e38c3bda1e"
+        }
+      ],
+      "pipeline_completion_token_savings_fraction": 0.17036851209588066,
+      "report_source": {
+        "path": "provenance/colm/transfer_analysis_goedel_block2.json",
+        "sha256": "c5e316d2873adbd3767558e49e6e2e0f27a2977b1e926ab47af7be2705c44975"
+      },
+      "retry_completion_token_savings_fraction": 0.33874078936011776,
+      "rules": {
+        "pipeline_calls": 293,
+        "pipeline_calls_per_verified": 2.1865671641791047,
+        "pipeline_completion_tokens": 1643607,
+        "pipeline_completion_tokens_per_verified": 12265.723880597016,
+        "retry_calls_to_target": 91,
+        "retry_completion_tokens_to_target": 658880
+      },
+      "target_retry_solves": 15,
+      "total_verified_of_202": 134,
+      "uniform": {
+        "pipeline_calls": 326,
+        "pipeline_calls_per_verified": 2.4328358208955225,
+        "pipeline_completion_tokens": 1981129,
+        "pipeline_completion_tokens_per_verified": 14784.544776119403,
+        "retry_calls_to_target": 124,
+        "retry_completion_tokens_to_target": 996402
+      }
+    }
+  },
+  "currency": "completion_tokens",
+  "scope": "Common baseline stage-one screen over 202 theorems plus confirmatory recovery on the 40 held-out failures; the 43 development failures are not re-entered into this pipeline accounting.",
+  "stage1": {
+    "calls": 202,
+    "completion_tokens": 984727,
+    "prompt_tokens": 36741,
+    "source": {
+      "all_rows": 606,
+      "path": "runs/epp_confirmatory_202/evaluation/attempts.jsonl",
+      "sha256": "3f8e0da4f7e8516d0c8db433d106899556e2a8fa78224424d8196a6fdf665f18"
+    },
+    "verified": 119
+  },
+  "status": "cpu_exact_replay_passed"
+}

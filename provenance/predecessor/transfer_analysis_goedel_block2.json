@@ -1,0 +1,98 @@
+{
+  "name": "goedel_block2",
+  "labels": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ],
+  "n_theorems": 40,
+  "classes": {
+    "simp_failed": 1,
+    "linarith_failed": 8,
+    "truncated": 15,
+    "other": 3,
+    "unsolved_goals": 9,
+    "timeout": 3,
+    "unknown_identifier": 1
+  },
+  "rescues_per_draw": [
+    8,
+    9,
+    7,
+    7
+  ],
+  "primary": {
+    "uniform_solves": 15,
+    "uniform_full_spend": 1014564,
+    "Tu": 996402,
+    "T_rules": 658880,
+    "savings": 0.33874078936011776,
+    "rules_final_solves": 15,
+    "oracle_tokens": 129826
+  },
+  "orderings_summary": {
+    "uniform": {
+      "s100": 15,
+      "s75": 13.333333333333334,
+      "s50": 10.666666666666666,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    },
+    "random": {
+      "s100": 14.991666666666667,
+      "s75": 13.291666666666666,
+      "s50": 10.616666666666667,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    },
+    "rules": {
+      "s100": 14.833333333333334,
+      "s75": 14.833333333333334,
+      "s50": 12.083333333333334,
+      "reach_frac": 0.8333333333333334,
+      "savings_median": 0.3210865641302363,
+      "savings_all": [
+        0.33874078936011776,
+        0.25034015703113255,
+        0.2836316607490972,
+        0.29970604906212517,
+        0.34392554981194867,
+        0.2552666331279084,
+        0.3407886820915954,
+        0.3377724481431925,
+        0.2682397642367568,
+        0.3539125312609801,
+        0.34117280350714907,
+        0.33816231131978336,
+        0.2768790218880064,
+        0.35804864737061926,
+        0.28789840528596977,
+        0.30440068011728005,
+        0.26882591419971447,
+        0.3545074924744005,
+        0.2787631642573194,
+        0.3598631565283297
+      ]
+    },
+    "oracle": {
+      "s100": 15,
+      "s75": 15,
+      "s50": 15,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    }
+  },
+  "frozen_class_order": [
+    "unknown_identifier",
+    "unsolved_goals",
+    "linarith_failed",
+    "other",
+    "simp_failed",
+    "truncated",
+    "timeout"
+  ]
+}

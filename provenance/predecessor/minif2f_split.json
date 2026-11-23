@@ -1,0 +1,10 @@
+{
+  "minif2f_test_statements": 244,
+  "evaluation_theorems_used": 202,
+  "excluded_inspected": 42,
+  "exclusion_rule": "Statements inspected during the predecessor's debugging were set aside before the confirmatory run; their observed failures had driven a harness redesign, so retaining them would have been adaptive test-set exposure.",
+  "timing": "The exclusion was fixed before the confirmatory 202-theorem run was launched, and therefore before any first-attempt or retry outcome reported in this manuscript.",
+  "category_balance": "The excluded statements track the full 244-statement category mix, with 76-100% retention per category, so the retained subset is not category-cherry-picked.",
+  "verification": "Line counts of the predecessor's frozen split files: minif2f_test.jsonl = 244, minif2f_test_untouched.jsonl = 202, minif2f_test_inspected42.jsonl = 42.",
+  "source": "Accepted non-archival predecessor manuscript and its frozen data/ split files."
+}

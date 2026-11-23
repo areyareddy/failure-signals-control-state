@@ -1,0 +1,99 @@
+{
+  "name": "deepseek",
+  "labels": [
+    "D0",
+    "D1",
+    "D2",
+    "D3"
+  ],
+  "n_theorems": 31,
+  "classes": {
+    "other": 14,
+    "unknown_identifier": 2,
+    "unsolved_goals": 7,
+    "linarith_failed": 8
+  },
+  "rescues_per_draw": [
+    5,
+    4,
+    7,
+    3
+  ],
+  "primary": {
+    "uniform_solves": 10,
+    "uniform_full_spend": 143785,
+    "Tu": 100254,
+    "T_rules": 100254,
+    "savings": 0.0,
+    "rules_final_solves": 10,
+    "oracle_tokens": 22037
+  },
+  "orderings_summary": {
+    "uniform": {
+      "s100": 9.75,
+      "s75": 8.166666666666666,
+      "s50": 6.333333333333333,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    },
+    "random": {
+      "s100": 9.691666666666666,
+      "s75": 8.233333333333333,
+      "s50": 6.375,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    },
+    "rules": {
+      "s100": 9.791666666666666,
+      "s75": 8.5,
+      "s50": 6.583333333333333,
+      "reach_frac": 1.0,
+      "savings_median": 0.0,
+      "savings_all": [
+        0.0,
+        0.0,
+        -0.12635029248860552,
+        -0.08381674906557257,
+        0.0,
+        -0.08180937996204629,
+        0.0,
+        0.0,
+        0.14402058326157552,
+        0.10055412697837818,
+        0.0,
+        0.09808590465558298,
+        -0.13049011008018185,
+        -0.08561863149617799,
+        0.14328475290037568,
+        0.10019487549621076,
+        -0.08494723973748552,
+        0.09895992985407653,
+        0.0,
+        -0.08122053813797181,
+        0.0,
+        0.09791502087800474,
+        -0.08227458617332029,
+        0.09619035740517468
+      ]
+    },
+    "oracle": {
+      "s100": 10,
+      "s75": 10,
+      "s50": 10,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    }
+  },
+  "frozen_class_order": [
+    "unknown_identifier",
+    "unsolved_goals",
+    "linarith_failed",
+    "other",
+    "simp_failed",
+    "truncated",
+    "timeout"
+  ]
+}

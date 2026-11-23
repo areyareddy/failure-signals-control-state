@@ -1,0 +1,80 @@
+{
+  "cohorts": {
+    "dev": {
+      "long_realized_completion_tokens": 369855,
+      "long_verified": 5,
+      "n": 43,
+      "stage1_truncated_roots": 17,
+      "variants": [
+        {
+          "realized_completion_tokens": 271309,
+          "token_savings_fraction": 0.26644495815927866,
+          "tokens_saved": 98546,
+          "truncated_root_cap": 4096,
+          "verified": 5,
+          "verified_change": 0
+        },
+        {
+          "realized_completion_tokens": 302007,
+          "token_savings_fraction": 0.18344486352759865,
+          "tokens_saved": 67848,
+          "truncated_root_cap": 6144,
+          "verified": 5,
+          "verified_change": 0
+        },
+        {
+          "realized_completion_tokens": 328287,
+          "token_savings_fraction": 0.11238999067202012,
+          "tokens_saved": 41568,
+          "truncated_root_cap": 8192,
+          "verified": 5,
+          "verified_change": 0
+        }
+      ]
+    },
+    "eval": {
+      "long_realized_completion_tokens": 265527,
+      "long_verified": 9,
+      "n": 40,
+      "stage1_truncated_roots": 15,
+      "variants": [
+        {
+          "realized_completion_tokens": 196922,
+          "token_savings_fraction": 0.2583729714868921,
+          "tokens_saved": 68605,
+          "truncated_root_cap": 4096,
+          "verified": 6,
+          "verified_change": -3
+        },
+        {
+          "realized_completion_tokens": 220569,
+          "token_savings_fraction": 0.16931611474539313,
+          "tokens_saved": 44958,
+          "truncated_root_cap": 6144,
+          "verified": 8,
+          "verified_change": -1
+        },
+        {
+          "realized_completion_tokens": 237324,
+          "token_savings_fraction": 0.10621518715610842,
+          "tokens_saved": 28203,
+          "truncated_root_cap": 8192,
+          "verified": 9,
+          "verified_change": 0
+        }
+      ]
+    }
+  },
+  "dev_selected_cap": 4096,
+  "eval_at_dev_selected_cap": {
+    "realized_completion_tokens": 196922,
+    "token_savings_fraction": 0.2583729714868921,
+    "tokens_saved": 68605,
+    "truncated_root_cap": 4096,
+    "verified": 6,
+    "verified_change": -3
+  },
+  "policy": "cap stage1-truncated roots only; leave all other roots at 12288",
+  "prefix_basis": "allocation_analysis.json exact-prefix audit",
+  "status": "retrospective_exploratory_counterfactual_not_preregistered"
+}

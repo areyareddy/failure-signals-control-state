@@ -1,0 +1,260 @@
+{
+  "aggregate": {
+    "affected15": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_effect": 0.0,
+      "n_blocks": 3,
+      "n_theorems": 15,
+      "note": "clustered on theorem; blocks are repeated measures on the same theorems and are never counted as independent samples"
+    },
+    "all40": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_effect": 0.0,
+      "n_blocks": 3,
+      "n_theorems": 40,
+      "note": "clustered on theorem; blocks are repeated measures on the same theorems and are never counted as independent samples"
+    }
+  },
+  "complete_blocks": [
+    1,
+    2,
+    3
+  ],
+  "energy": {
+    "branches_measured": 240,
+    "coverage_failures": 0,
+    "idle_baseline": {
+      "coverage_ok": true,
+      "covered_seconds": 70.794,
+      "gaps": [],
+      "interval_seconds": 70.981,
+      "invalid_samples": 0,
+      "joules": 1553.883,
+      "lead_uncovered_s": 0.172,
+      "mean_power_w": 21.95,
+      "n_samples": 334,
+      "peak_vram_mib": 12237.0,
+      "sample_interval_s": {
+        "max": 0.2331,
+        "p50": 0.2133,
+        "p95": 0.2216
+      },
+      "tail_uncovered_s": 0.016,
+      "temperature_c": {
+        "max": 45.0,
+        "min": 44.0
+      },
+      "utilization_pct": {
+        "max": 25.0,
+        "mean": 1.5
+      }
+    },
+    "per_block": {
+      "1": {
+        "idle_adjusted_saved_j_estimate": 76624.9,
+        "joules_saved": 82946.5,
+        "joules_saved_pct": 11.19,
+        "long_j": 741465.0,
+        "long_s": 2681.0,
+        "n_fail": 0,
+        "n_ok": 80,
+        "targeted_j": 658518.4,
+        "targeted_s": 2393.0
+      },
+      "2": {
+        "idle_adjusted_saved_j_estimate": 92594.8,
+        "joules_saved": 101506.5,
+        "joules_saved_pct": 13.33,
+        "long_j": 761688.5,
+        "long_s": 2600.0,
+        "n_fail": 0,
+        "n_ok": 80,
+        "targeted_j": 660182.1,
+        "targeted_s": 2194.0
+      },
+      "3": {
+        "idle_adjusted_saved_j_estimate": 96181.7,
+        "joules_saved": 103776.4,
+        "joules_saved_pct": 13.17,
+        "long_j": 788135.1,
+        "long_s": 2623.0,
+        "n_fail": 0,
+        "n_ok": 80,
+        "targeted_j": 684358.6,
+        "targeted_s": 2277.0
+      }
+    }
+  },
+  "equivalence_claim": false,
+  "n_incomplete": 0,
+  "n_rows_seen": 165,
+  "per_block": {
+    "1": {
+      "affected15": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "effect": 0.0,
+        "forced_ties": 0,
+        "long_verified": 3,
+        "n": 15,
+        "p_exact_mcnemar": 1.0,
+        "targeted_verified": 3,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "all40": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "effect": 0.0,
+        "forced_ties": 25,
+        "long_verified": 9,
+        "n": 40,
+        "p_exact_mcnemar": 1.0,
+        "targeted_verified": 9,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "cost": {
+        "long_calls": 40,
+        "long_request_s": 1995.3,
+        "long_tokens": 268325,
+        "targeted_calls": 40,
+        "targeted_request_s": 1778.2,
+        "targeted_tokens": 242086,
+        "tokens_saved": 26239,
+        "tokens_saved_pct": 9.78,
+        "wall_saved_pct": 10.88
+      },
+      "long_states": {
+        "lean_failed": 22,
+        "truncated": 9,
+        "verified": 9
+      },
+      "targeted_states": {
+        "lean_failed": 17,
+        "truncated": 14,
+        "verified": 9
+      }
+    },
+    "2": {
+      "affected15": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "effect": 0.0,
+        "forced_ties": 0,
+        "long_verified": 4,
+        "n": 15,
+        "p_exact_mcnemar": 1.0,
+        "targeted_verified": 4,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "all40": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "effect": 0.0,
+        "forced_ties": 25,
+        "long_verified": 12,
+        "n": 40,
+        "p_exact_mcnemar": 1.0,
+        "targeted_verified": 12,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "cost": {
+        "long_calls": 40,
+        "long_request_s": 2041.4,
+        "long_tokens": 273802,
+        "targeted_calls": 40,
+        "targeted_request_s": 1787.1,
+        "targeted_tokens": 243257,
+        "tokens_saved": 30545,
+        "tokens_saved_pct": 11.16,
+        "wall_saved_pct": 12.45
+      },
+      "long_states": {
+        "lean_failed": 18,
+        "truncated": 10,
+        "verified": 12
+      },
+      "targeted_states": {
+        "lean_failed": 15,
+        "truncated": 13,
+        "verified": 12
+      }
+    },
+    "3": {
+      "affected15": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "effect": 0.0,
+        "forced_ties": 0,
+        "long_verified": 4,
+        "n": 15,
+        "p_exact_mcnemar": 1.0,
+        "targeted_verified": 4,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "all40": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "effect": 0.0,
+        "forced_ties": 25,
+        "long_verified": 8,
+        "n": 40,
+        "p_exact_mcnemar": 1.0,
+        "targeted_verified": 8,
+        "x_only": 0,
+        "y_only": 0
+      },
+      "cost": {
+        "long_calls": 40,
+        "long_request_s": 2120.3,
+        "long_tokens": 281932,
+        "targeted_calls": 40,
+        "targeted_request_s": 1851.3,
+        "targeted_tokens": 249909,
+        "tokens_saved": 32023,
+        "tokens_saved_pct": 11.36,
+        "wall_saved_pct": 12.69
+      },
+      "long_states": {
+        "lean_failed": 20,
+        "truncated": 12,
+        "verified": 8
+      },
+      "targeted_states": {
+        "lean_failed": 19,
+        "truncated": 13,
+        "verified": 8
+      }
+    }
+  },
+  "prefix_gate": {
+    "checked": 45,
+    "equal_ok": 19,
+    "prefix_ok": 26,
+    "violations": []
+  },
+  "reading": "Prospective seed replication on the existing 40-theorem cohort, not validation on new theorems. An interval crossing zero is unresolved, never evidence of equality.",
+  "spec": "spec/CAP_POLICY_SPEC.md"
+}

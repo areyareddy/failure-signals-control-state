@@ -1,0 +1,293 @@
+{
+  "best_pre_registered": 11,
+  "budget_nominal_tokens": 12288,
+  "by_draw_count": {
+    "1": {
+      "caps": [
+        8192,
+        0,
+        0
+      ],
+      "yield": 9
+    },
+    "2": {
+      "caps": [
+        7168,
+        5120,
+        0
+      ],
+      "yield": 12
+    },
+    "3": {
+      "caps": [
+        6144,
+        5120,
+        1024
+      ],
+      "yield": 11
+    }
+  },
+  "ceiling": {
+    "caps": [
+      6500,
+      4966,
+      0
+    ],
+    "n_schedules_searched": 419,
+    "nominal": 11466,
+    "verified": 12
+  },
+  "frontier_oracle": {
+    "1": {
+      "caps": [
+        0,
+        883,
+        0
+      ],
+      "nominal": 883
+    },
+    "10": {
+      "caps": [
+        6500,
+        1268,
+        0
+      ],
+      "nominal": 7768
+    },
+    "11": {
+      "caps": [
+        7411,
+        1268,
+        0
+      ],
+      "nominal": 8679
+    },
+    "12": {
+      "caps": [
+        6500,
+        4966,
+        0
+      ],
+      "nominal": 11466
+    },
+    "13": {
+      "caps": [
+        7411,
+        4966,
+        0
+      ],
+      "nominal": 12377
+    },
+    "2": {
+      "caps": [
+        0,
+        1228,
+        0
+      ],
+      "nominal": 1228
+    },
+    "3": {
+      "caps": [
+        0,
+        1268,
+        0
+      ],
+      "nominal": 1268
+    },
+    "4": {
+      "caps": [
+        0,
+        1956,
+        0
+      ],
+      "nominal": 1956
+    },
+    "5": {
+      "caps": [
+        0,
+        2643,
+        0
+      ],
+      "nominal": 2643
+    },
+    "6": {
+      "caps": [
+        0,
+        3425,
+        0
+      ],
+      "nominal": 3425
+    },
+    "7": {
+      "caps": [
+        3263,
+        1268,
+        0
+      ],
+      "nominal": 4531
+    },
+    "8": {
+      "caps": [
+        0,
+        4966,
+        0
+      ],
+      "nominal": 4966
+    },
+    "9": {
+      "caps": [
+        0,
+        4966,
+        1696
+      ],
+      "nominal": 6662
+    }
+  },
+  "headroom_points": 2.5,
+  "headroom_roots": 1,
+  "interpretation": {
+    "attaining_schedule_is_post_hoc": "The schedule attaining the maximum was selected against the evaluation outcomes. It is an upper bound on what cap scheduling could buy, not a recommended policy, and no p-value is computed for it.",
+    "ceiling_is_arithmetic": "The maximum is exhaustive over the continuous cap space, because yield changes only at verified-completion breakpoints. It is not an estimate: it has no minimum detectable effect and no multiplicity correction, because no hypothesis is tested.",
+    "reachable_space": "Seed+1 is executed only to 6144 tokens and seed+2 only to 4096, so schedules requiring longer draws at those offsets are outside the reachable space and are not evaluated."
+  },
+  "max_executed_cap_per_seed_offset": {
+    "0": 12288,
+    "1": 6144,
+    "2": 4096
+  },
+  "n_roots": 40,
+  "recorded_verified": {
+    "long": 9,
+    "split2": 11,
+    "split3": 8
+  },
+  "round_best": {
+    "attaining_caps": [
+      [
+        7168,
+        5120,
+        0
+      ]
+    ],
+    "caps": [
+      7168,
+      5120,
+      0
+    ],
+    "n_attaining": 1,
+    "n_schedules_searched": 279,
+    "nominal": 12288,
+    "verified": 12
+  },
+  "round_step": 1024,
+  "round_yield_distribution": {
+    "0": 1,
+    "1": 6,
+    "10": 30,
+    "11": 13,
+    "12": 1,
+    "3": 5,
+    "4": 15,
+    "5": 24,
+    "6": 30,
+    "7": 47,
+    "8": 42,
+    "9": 65
+  },
+  "seed_lattice": {
+    "ok": true,
+    "prefix_checks": [
+      {
+        "exact_prefix": 40,
+        "n": 40,
+        "note": "seed+0, cap 4096 inside cap 6144",
+        "ok": true,
+        "pair": "split3_d1_in_split2_d1",
+        "seeds_equal": 40
+      },
+      {
+        "exact_prefix": 40,
+        "n": 40,
+        "note": "seed+0, cap 6144 inside cap 12288",
+        "ok": true,
+        "pair": "split2_d1_in_long",
+        "seeds_equal": 40
+      },
+      {
+        "exact_prefix": 40,
+        "n": 40,
+        "note": "seed+1, cap 4096 inside cap 6144",
+        "ok": true,
+        "pair": "split3_d2_in_split2_d2",
+        "seeds_equal": 40
+      }
+    ],
+    "seed_offsets": [
+      {
+        "draw": "split2_d2",
+        "expected_offset": 1,
+        "n_matching": 40,
+        "of": 40,
+        "ok": true
+      },
+      {
+        "draw": "split3_d3",
+        "expected_offset": 2,
+        "n_matching": 40,
+        "of": 40,
+        "ok": true
+      }
+    ]
+  },
+  "union": {
+    "budget_multiple": 1.0072428385416667,
+    "caps": [
+      12288,
+      6144,
+      4096
+    ],
+    "min_caps": [
+      7411,
+      4966,
+      0
+    ],
+    "min_nominal_tokens": 12377,
+    "nominal_all_executed_draws": 22528,
+    "verified": 13
+  },
+  "validity": [
+    {
+      "caps": [
+        12288,
+        0,
+        0
+      ],
+      "ok": true,
+      "policy": "long",
+      "recorded": 9,
+      "simulated": 9
+    },
+    {
+      "caps": [
+        6144,
+        6144,
+        0
+      ],
+      "ok": true,
+      "policy": "split2",
+      "recorded": 11,
+      "simulated": 11
+    },
+    {
+      "caps": [
+        4096,
+        4096,
+        4096
+      ],
+      "ok": true,
+      "policy": "split3",
+      "recorded": 8,
+      "simulated": 8
+    }
+  ]
+}

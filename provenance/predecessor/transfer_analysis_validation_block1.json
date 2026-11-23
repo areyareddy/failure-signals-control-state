@@ -1,0 +1,90 @@
+{
+  "name": "validation_block1",
+  "labels": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "n_theorems": 40,
+  "classes": {
+    "simp_failed": 1,
+    "linarith_failed": 8,
+    "truncated": 15,
+    "other": 3,
+    "unsolved_goals": 9,
+    "timeout": 3,
+    "unknown_identifier": 1
+  },
+  "rescues_per_draw": [
+    9,
+    9,
+    8,
+    9
+  ],
+  "primary": {
+    "uniform_solves": 14,
+    "uniform_full_spend": 997248,
+    "Tu": 734095,
+    "T_rules": 532270,
+    "savings": 0.2749303564252583,
+    "rules_final_solves": 14,
+    "oracle_tokens": 107984
+  },
+  "orderings_summary": {
+    "uniform": {
+      "s100": 14,
+      "s75": 13.416666666666666,
+      "s50": 10.916666666666666,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    },
+    "random": {
+      "s100": 13.958333333333334,
+      "s75": 12.683333333333334,
+      "s50": 10.833333333333334,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    },
+    "rules": {
+      "s100": 13.5,
+      "s75": 13.5,
+      "s50": 12,
+      "reach_frac": 0.5,
+      "savings_median": 0.1781423071747778,
+      "savings_all": [
+        0.2749303564252583,
+        0.29147135052245576,
+        0.27927684835402056,
+        0.29587168692370514,
+        0.013069360910555106,
+        0.179559140754329,
+        0.07679684883665305,
+        0.17410847722622036,
+        0.01337966165649962,
+        0.18243885472754118,
+        0.07824337871277076,
+        0.1767254735952266
+      ]
+    },
+    "oracle": {
+      "s100": 14,
+      "s75": 14,
+      "s50": 14,
+      "reach_frac": 1.0,
+      "savings_median": null,
+      "savings_all": null
+    }
+  },
+  "frozen_class_order": [
+    "unknown_identifier",
+    "unsolved_goals",
+    "linarith_failed",
+    "other",
+    "simp_failed",
+    "truncated",
+    "timeout"
+  ]
+}
